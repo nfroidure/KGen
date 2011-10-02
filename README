@@ -1,25 +1,24 @@
+# Welcome on KGen sources
 
-# Welcome on KGen sources #
-
-# About KGen technologies
+## About KGen technologies
 
 KGen is a Firefox addon. It use XUL and Javascript. You can get more information on the Mozilla Developer Center (https://developper.mozilla.org).
 
-# Quick start
+## Quick start
 
 Create a new Firefox profile for add on development (https://developer.mozilla.org/en/Setting_up_extension_development_environment).
 
 Clone the project into the extension folder of this new profile.
 
 -Unix/Linux :
-$ git clone https://nfroidure@bitbucket.org/nfroidure/kgen/ ~/.mozilla/firefox/(FirefoxProfile)/extensions/kgen@elitwork.com
+$ git clone git://github.com/nfroidure/KGen.git ~/.mozilla/firefox/(FirefoxProfile)/extensions/kgen@elitwork.com
 
 -Windows sample :
-$ git clone https://nfroidure@bitbucket.org/nfroidure/kgen/ C:\Documents and Settings\(WindowsProfiles)\Application Data\Mozilla\Firefox\Profiles\(FirefoxProfile)\extensions\kgen@elitwork.com
+$ git clone git://github.com/nfroidure/KGen.git C:\Documents and Settings\(WindowsProfiles)\Application Data\Mozilla\Firefox\Profiles\(FirefoxProfile)\extensions\kgen@elitwork.com
 
 The extension will be installed on the next Firefox start (with dev. profile). Restart firefox on each changes to test them.
 
-# About locales
+## About locales
 
 DO NOT add or modify locales files! Those are managed in Babelzilla only! http://www.babelzilla.org
 
