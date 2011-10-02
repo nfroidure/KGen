@@ -1,0 +1,20 @@
+content  tags   chrome/tags/content/
+locale   tags   de-DE   chrome/tags/locale/de-DE/
+locale   tags   en-US   chrome/tags/locale/en-US/
+locale   tags   es-ES   chrome/tags/locale/es-ES/
+locale   tags   fr-FR   chrome/tags/locale/fr-FR/
+locale   tags   it-IT   chrome/tags/locale/it-IT/
+locale   tags   ja-JP   chrome/tags/locale/ja-JP/
+locale   tags   ko-KR   chrome/tags/locale/ko-KR/
+locale   tags   nl-NL   chrome/tags/locale/nl-NL/
+locale   tags   pl-PL   chrome/tags/locale/pl-PL/
+locale   tags   pt-BR   chrome/tags/locale/pt-BR/
+locale   tags   tr-TR   chrome/tags/locale/tr-TR/
+locale   tags   zh-CN   chrome/tags/locale/zh-CN/
+locale   tags   ja-JP   chrome/tags/locale/ja-JP/
+locale   tags   ru-RU   chrome/tags/locale/ru-RU/
+locale   tags   uk-UA   chrome/tags/locale/uk-UA/
+skin  tags   classic   chrome/tags/skin/classic/
+overlay chrome://browser/content/browser.xul  chrome://tags/content/browser-overlay.xul
+overlay chrome://bbcomposer/content/bbcomposer.xul  chrome://tags/content/bbcomposer-overlay.xul
+style	chrome://global/content/customizeToolbar.xul	chrome://tags/skin/toolbar-button.css

@@ -1,0 +1,92 @@
+<!ENTITY tags.name "KGen: Anahtar kelime üreteci">
+<!ENTITY tags.tooltiptext "Bu dokümanda anahtar kelimeleri göster">
+<!ENTITY tags.tabs.list "Liste">
+<!ENTITY tags.tabs.stats "Stats">
+<!ENTITY tags.tabs.cloud "Bulut">
+<!ENTITY tags.tabs.export "Export">
+<!ENTITY tags.tabs.options "Seçenekler">
+<!ENTITY tags.tabs.tags "Tag&apos;lar">
+<!ENTITY tags.tabs.atts "Özellikler">
+<!ENTITY tags.tabs.uri "URI">
+<!ENTITY tags.tabs.ignore "Yoksay">
+<!ENTITY tags.keywords "Kelime Listesi">
+<!ENTITY tags.keywords.name "Adı">
+<!ENTITY tags.keywords.repeat "Tekrar">
+<!ENTITY tags.keywords.weight "Kalınlığı">
+<!ENTITY tags.keywords.position "Pos.">
+<!ENTITY tags.keywords.desc "CTRL tuşuna basarak birden fazla seçebilirsiniz">
+<!ENTITY tags.keywords.desc2 "Right click on a word to get more infos.">
+<!ENTITY tags.keywords.export "Export words to clipboard">
+<!ENTITY tags.keywords.exportall "Ağırlık ve tekrarlarla">
+<!ENTITY tags.scan "Tara!">
+<!ENTITY tags.stats.words "Words">
+<!ENTITY tags.stats.totalwords "Sum of words :">
+<!ENTITY tags.stats.originalwords "Sum of different words :">
+<!ENTITY tags.stats.vocable "Vocabulary richness (in percents) :">
+<!ENTITY tags.stats.keptwords "Conserved words :">
+<!ENTITY tags.stats.html "HTML Document">
+<!ENTITY tags.stats.totalchars "Total chars :">
+<!ENTITY tags.stats.efficientchars "Total text chars :">
+<!ENTITY tags.stats.htmlquality "HTML Richness (in percents) :">
+<!ENTITY tags.stats.dictionnary "Dictionnary">
+<!ENTITY tags.stats.totalknown "Recognized words :">
+<!ENTITY tags.stats.totalunknown "Unrecognized words :">
+<!ENTITY tags.stats.wordsquality "Text richness (in percents) :">
+<!ENTITY tags.cloud.factor "Boyut çarpanı">
+<!ENTITY tags.cloud.redraw "Tekrar çiz">
+<!ENTITY tags.cloud.clipboard "HTML kaynak kodunu panoya kopyala">
+<!ENTITY tags.export.cvs "Options d'exportation">
+<!ENTITY tags.export.cvsseparator "Séparateur de champ">
+<!ENTITY tags.export.cvsstring "Délimiteur de chaîne">
+<!ENTITY tags.export.cvsselection "Exporter la sélection uniquement">
+<!ENTITY tags.export.save "Exporter le fichier">
+<!ENTITY tags.sort "Kelimeleri sırala">
+<!ENTITY tags.sort.weight "Kalınlığına göre">
+<!ENTITY tags.sort.repeat "Tekrar sayısına göre">
+<!ENTITY tags.sort.length "Kelime uzunluğuna göre">
+<!ENTITY tags.sort.name "Adına göre">
+<!ENTITY tags.sort.fposition "By first apparition">
+<!ENTITY tags.sort.aposition "By average position">
+<!ENTITY tags.ignore "Kelimeleri yoksay">
+<!ENTITY tags.ignore.minlength "e az (X) kelimeden oluşanlar">
+<!ENTITY tags.ignore.minweight "En az şu kalınlıktakiler">
+<!ENTITY tags.ignore.minrepeat "En az (X) kez tekrar edilmeyenler">
+<!ENTITY tags.combinaison "Word combination">
+<!ENTITY tags.combinaison.maxword "Combine (x) words max">
+<!ENTITY tags.other "Diğer">
+<!ENTITY tags.other.percent "Tekrar ve kalınlığı yüzde cinsinden göster">
+<!ENTITY tags.other.wordstot "Tekrar yüzdelerine göre tüm kelimelerin dağılımı">
+<!ENTITY tags.other.ignore "Yoksay listesini kullanma">
+<!ENTITY tags.clipboard "Pano seçenekleri">
+<!ENTITY tags.clipboard.separator "Anahtar kelime ayracı">
+<!ENTITY tags.wordseparator.caption "Anlamsal seçenekler">
+<!ENTITY tags.wordseparator "Kelime ayracı karakterler">
+<!ENTITY tags.dictionnary "Dictionaries">
+<!ENTITY tags.dictionnary.none "None (disabled)">
+<!ENTITY tags.tags "Tag&apos;ların kalınlığı">
+<!ENTITY tags.tags.tag "Tag">
+<!ENTITY tags.atts "Özelliklerin kalınlığı">
+<!ENTITY tags.atts.att "Özellik">
+<!ENTITY tags.weight "Kalınlık">
+<!ENTITY tags.edit "Düzenle">
+<!ENTITY tags.add "Ekle/Değiştir">
+<!ENTITY tags.uri "URI Ağırlıkları">
+<!ENTITY tags.uri.hostname "Alan adı">
+<!ENTITY tags.uri.pathname "Yol adı">
+<!ENTITY tags.ilist "Yoksay listesi">
+<!ENTITY tags.ilist.iwords "Yoksayılan kelimeler">
+<!ENTITY tags.ilist.desc "Kaldırmak için çit tıklayın">
+<!ENTITY tags.contextmenu.synonym "Synonyms">
+<!ENTITY tags.contextmenu.synonym.ttt "Search synonyms for this word">
+<!ENTITY tags.contextmenu.find "Find">
+<!ENTITY tags.contextmenu.find.ttt "Find this word in the page">
+<!ENTITY tags.contextmenu.ignore "Ignore">
+<!ENTITY tags.contextmenu.ignore.ttt "Ignore this word for next scans">
+<!ENTITY tags.contextmenu.copy "Copy words">
+<!ENTITY tags.contextmenu.copy.ttt "Copy the selected word">
+<!ENTITY tags.contextmenu.copyall "Copy all">
+<!ENTITY tags.contextmenu.copyall.ttt "Copy every values for the selected lines">
+<!ENTITY tags.contextmenu.definition "Definition">
+<!ENTITY tags.contextmenu.definition.ttt "Get the definition of this word">
+<!ENTITY tags.contextmenu.contribute "Contribute">
+<!ENTITY tags.contextmenu.contribute.ttt "Contribute to KGen">

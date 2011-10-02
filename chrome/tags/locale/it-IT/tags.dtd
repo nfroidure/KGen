@@ -1,0 +1,92 @@
+<!ENTITY tags.name "KGen: generatore di parole chiave">
+<!ENTITY tags.tooltiptext "Visualizza le parole del documento">
+<!ENTITY tags.tabs.list "Elenco">
+<!ENTITY tags.tabs.stats "Statistiche">
+<!ENTITY tags.tabs.cloud "Nuvola">
+<!ENTITY tags.tabs.export "Export">
+<!ENTITY tags.tabs.options "Opzioni">
+<!ENTITY tags.tabs.tags "Tag">
+<!ENTITY tags.tabs.atts "Attributi">
+<!ENTITY tags.tabs.uri "URI">
+<!ENTITY tags.tabs.ignore "Ignora">
+<!ENTITY tags.keywords "Elenco di parole">
+<!ENTITY tags.keywords.name "Nome">
+<!ENTITY tags.keywords.repeat "Occorrenze">
+<!ENTITY tags.keywords.weight "Rilevanza">
+<!ENTITY tags.keywords.position "Pos.">
+<!ENTITY tags.keywords.desc "Premere CTRL per effettuare una selezione multipla">
+<!ENTITY tags.keywords.desc2 "Right click on a word to get more infos.">
+<!ENTITY tags.keywords.export "Export words to clipboard">
+<!ENTITY tags.keywords.exportall "con rilevanza e occorrenze">
+<!ENTITY tags.scan "Analizza">
+<!ENTITY tags.stats.words "Termini">
+<!ENTITY tags.stats.totalwords "Somma dei termini:">
+<!ENTITY tags.stats.originalwords "Somma dei termini diversi:">
+<!ENTITY tags.stats.vocable "Ricchezza del lessico (percentuale):">
+<!ENTITY tags.stats.keptwords "Termini conservati:">
+<!ENTITY tags.stats.html "Documento HTML">
+<!ENTITY tags.stats.totalchars "Caratteri totali:">
+<!ENTITY tags.stats.efficientchars "Caratteri testuali totali:">
+<!ENTITY tags.stats.htmlquality "Ricchezza dell&apos;HTML (percentuale):">
+<!ENTITY tags.stats.dictionnary "Dizionario">
+<!ENTITY tags.stats.totalknown "Termini riconosciuti:">
+<!ENTITY tags.stats.totalunknown "Termini non riconosciuti:">
+<!ENTITY tags.stats.wordsquality "Ricchezza del testo (percentuale):">
+<!ENTITY tags.cloud.factor "Fattore dimensione">
+<!ENTITY tags.cloud.redraw "Ridisegna">
+<!ENTITY tags.cloud.clipboard "Inserisci il sorgente HTML negli appunti">
+<!ENTITY tags.export.cvs "Options d'exportation">
+<!ENTITY tags.export.cvsseparator "Séparateur de champ">
+<!ENTITY tags.export.cvsstring "Délimiteur de chaîne">
+<!ENTITY tags.export.cvsselection "Exporter la sélection uniquement">
+<!ENTITY tags.export.save "Exporter le fichier">
+<!ENTITY tags.sort "Ordina le parole">
+<!ENTITY tags.sort.weight "Per rilevanza">
+<!ENTITY tags.sort.repeat "Per numero di occorrenze">
+<!ENTITY tags.sort.length "Per lunghezza">
+<!ENTITY tags.sort.name "Per nome">
+<!ENTITY tags.sort.fposition "Per prima occorrenza">
+<!ENTITY tags.sort.aposition "Per posizione media">
+<!ENTITY tags.ignore "Ignora parole">
+<!ENTITY tags.ignore.minlength "con meno di (x) lettere">
+<!ENTITY tags.ignore.minweight "con rilevanza di">
+<!ENTITY tags.ignore.minrepeat "che non ricorrono almeno (x) volte">
+<!ENTITY tags.combinaison "Word combination">
+<!ENTITY tags.combinaison.maxword "Combine (x) words max">
+<!ENTITY tags.other "Altro">
+<!ENTITY tags.other.percent "Mostra occorrenze e rilevanza in valori percentuali">
+<!ENTITY tags.other.wordstot "Mostra la percentuale di occorrenze rispetto al numero totale delle parole">
+<!ENTITY tags.other.ignore "Non utilizzare l&apos;elenco delle parole da ignorare">
+<!ENTITY tags.clipboard "Opzioni Appunti">
+<!ENTITY tags.clipboard.separator "Separatore per le parole chiave">
+<!ENTITY tags.wordseparator.caption "Opzioni semantiche">
+<!ENTITY tags.wordseparator "Caratteri di separazione tra le parole">
+<!ENTITY tags.dictionnary "Dizionario">
+<!ENTITY tags.dictionnary.none "Nessuno (disattivato)">
+<!ENTITY tags.tags "Rilevanza del tag">
+<!ENTITY tags.tags.tag "Tag">
+<!ENTITY tags.atts "Rilevanza dell&apos;attributo">
+<!ENTITY tags.atts.att "Attributo">
+<!ENTITY tags.weight "Rilevanza">
+<!ENTITY tags.edit "Modifica">
+<!ENTITY tags.add "Aggiungi o modifica">
+<!ENTITY tags.uri "Rilevanza degli URI">
+<!ENTITY tags.uri.hostname "Nomi di dominio">
+<!ENTITY tags.uri.pathname "Percorsi">
+<!ENTITY tags.ilist "Elenco parole da ignorare">
+<!ENTITY tags.ilist.iwords "Parole ignorate">
+<!ENTITY tags.ilist.desc "Doppio clic per rimuovere">
+<!ENTITY tags.contextmenu.synonym "Synonyms">
+<!ENTITY tags.contextmenu.synonym.ttt "Search synonyms for this word">
+<!ENTITY tags.contextmenu.find "Find">
+<!ENTITY tags.contextmenu.find.ttt "Find this word in the page">
+<!ENTITY tags.contextmenu.ignore "Ignore">
+<!ENTITY tags.contextmenu.ignore.ttt "Ignore this word for next scans">
+<!ENTITY tags.contextmenu.copy "Copy words">
+<!ENTITY tags.contextmenu.copy.ttt "Copy the selected word">
+<!ENTITY tags.contextmenu.copyall "Copy all">
+<!ENTITY tags.contextmenu.copyall.ttt "Copy every values for the selected lines">
+<!ENTITY tags.contextmenu.definition "Definition">
+<!ENTITY tags.contextmenu.definition.ttt "Get the definition of this word">
+<!ENTITY tags.contextmenu.contribute "Contribute">
+<!ENTITY tags.contextmenu.contribute.ttt "Contribute to KGen">

@@ -1,0 +1,92 @@
+<!ENTITY tags.name "KGen">
+<!ENTITY tags.tooltiptext "Voir les mots">
+<!ENTITY tags.tabs.list "Liste">
+<!ENTITY tags.tabs.stats "Stats">
+<!ENTITY tags.tabs.cloud "Nuage">
+<!ENTITY tags.tabs.export "Export">
+<!ENTITY tags.tabs.options "Options">
+<!ENTITY tags.tabs.tags "Balises">
+<!ENTITY tags.tabs.atts "Attributs">
+<!ENTITY tags.tabs.uri "Uri">
+<!ENTITY tags.tabs.ignore "Ignorés">
+<!ENTITY tags.keywords "Liste des mots">
+<!ENTITY tags.keywords.name "Nom">
+<!ENTITY tags.keywords.repeat "Répétition">
+<!ENTITY tags.keywords.weight "Poids">
+<!ENTITY tags.keywords.position "Pos.">
+<!ENTITY tags.keywords.desc "Maintenez la touche CTRL enfoncée pour de multiples sélections.">
+<!ENTITY tags.keywords.desc2 "Cliquez droit sur un mot pour plus d'infos.">
+<!ENTITY tags.keywords.export "Exporter dans le presse-papiers">
+<!ENTITY tags.keywords.exportall "Avec poids et répétitions">
+<!ENTITY tags.scan "Scanner ce document">
+<!ENTITY tags.stats.words "Mots">
+<!ENTITY tags.stats.totalwords "Nombre total de mots :">
+<!ENTITY tags.stats.originalwords "Nombre de mots différents :">
+<!ENTITY tags.stats.vocable "Richesse du vocabulaire (en pourcent) :">
+<!ENTITY tags.stats.keptwords "Nombre de mots conservés :">
+<!ENTITY tags.stats.html "Document HTML">
+<!ENTITY tags.stats.totalchars "Nombre total de caractères :">
+<!ENTITY tags.stats.efficientchars "Nombre de caractères affichant du texte :">
+<!ENTITY tags.stats.htmlquality "Richesse du HTML (en pourcent) :">
+<!ENTITY tags.stats.dictionnary "Dictionnaire">
+<!ENTITY tags.stats.totalknown "Nombre de mots reconnus :">
+<!ENTITY tags.stats.totalunknown "Nombre de mots inconnus :">
+<!ENTITY tags.stats.wordsquality "Richesse du texte (en pourcent) :">
+<!ENTITY tags.cloud.factor "Facteur de taille">
+<!ENTITY tags.cloud.redraw "Redessiner">
+<!ENTITY tags.cloud.clipboard "Source HTML vers le presse-papiers">
+<!ENTITY tags.export.cvs "Options d'exportation">
+<!ENTITY tags.export.cvsseparator "Séparateur de champ">
+<!ENTITY tags.export.cvsstring "Délimiteur de chaîne">
+<!ENTITY tags.export.cvsselection "Exporter la sélection uniquement">
+<!ENTITY tags.export.save "Exporter le fichier">
+<!ENTITY tags.sort "Trier les mots">
+<!ENTITY tags.sort.weight "Selon leur poids">
+<!ENTITY tags.sort.repeat "Par répétition">
+<!ENTITY tags.sort.length "Selon leur taille">
+<!ENTITY tags.sort.name "Par ordre alphabétique">
+<!ENTITY tags.sort.fposition "Par première apparition">
+<!ENTITY tags.sort.aposition "Selon sa position moyenne">
+<!ENTITY tags.ignore "Ignorer les mots">
+<!ENTITY tags.ignore.minlength "Contenant moins de (x) lettres">
+<!ENTITY tags.ignore.minweight "Ayant un poids de moins de">
+<!ENTITY tags.ignore.minrepeat "Qui se répètent moins de (x) fois">
+<!ENTITY tags.combinaison "Combinaisons de mots">
+<!ENTITY tags.combinaison.maxword "Combiner maximum (x) mots">
+<!ENTITY tags.other "Autre">
+<!ENTITY tags.other.percent "Exprimer les valeurs en pourcent">
+<!ENTITY tags.other.wordstot "Pourcentage de répétition sur le total réel">
+<!ENTITY tags.other.ignore "Ne pas utiliser la liste de mots ignorés">
+<!ENTITY tags.clipboard "Options du presse-papiers">
+<!ENTITY tags.clipboard.separator "Séparateur de mots-clés">
+<!ENTITY tags.wordseparator.caption "Options de ponctuation">
+<!ENTITY tags.wordseparator "Caractères séparateurs de mots">
+<!ENTITY tags.dictionnary "Dictionnaires">
+<!ENTITY tags.dictionnary.none "Aucun (désactivé)">
+<!ENTITY tags.tags "Poids des balises">
+<!ENTITY tags.tags.tag "Balise">
+<!ENTITY tags.atts "Poids des attributs">
+<!ENTITY tags.atts.att "Attribut">
+<!ENTITY tags.weight "Poids">
+<!ENTITY tags.edit "Éditer">
+<!ENTITY tags.add "Ajouter/Modifier">
+<!ENTITY tags.uri "Poids dans l&apos;uri">
+<!ENTITY tags.uri.hostname "Domaine">
+<!ENTITY tags.uri.pathname "Chemin du fichier">
+<!ENTITY tags.ilist "Liste noire">
+<!ENTITY tags.ilist.iwords "Mots ignorés">
+<!ENTITY tags.ilist.desc "Double clic pour supprimer">
+<!ENTITY tags.contextmenu.synonym "Synonymes">
+<!ENTITY tags.contextmenu.synonym.ttt "Chercher des synonymes de ce mot">
+<!ENTITY tags.contextmenu.find "Trouver dans la page">
+<!ENTITY tags.contextmenu.find.ttt "Trouver les occurences de ce mot dans la page en cours">
+<!ENTITY tags.contextmenu.ignore "Ignorer ce mot">
+<!ENTITY tags.contextmenu.ignore.ttt "Ignorer ce mot lors des prochains scans">
+<!ENTITY tags.contextmenu.copy "Copier la sélection">
+<!ENTITY tags.contextmenu.copy.ttt "Copier les mots sélectionnés">
+<!ENTITY tags.contextmenu.copyall "Tout copier">
+<!ENTITY tags.contextmenu.copyall.ttt "Copier toutes les informations sélectionnées">
+<!ENTITY tags.contextmenu.definition "Définition">
+<!ENTITY tags.contextmenu.definition.ttt "Voir la définition de ce mot dans le Wiktionnaire">
+<!ENTITY tags.contextmenu.contribute "Contribuer">
+<!ENTITY tags.contextmenu.contribute.ttt "Contribuer à KGen">

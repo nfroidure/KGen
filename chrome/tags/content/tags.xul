@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://tags/locale/tags.dtd">
+
+<window id="style_sidebar" title="&tags.name;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="chrome://tags/content/kgen.js"/>
+	<script type="application/x-javascript" src="chrome://tags/content/tags.js"/>
+	<script type="application/x-javascript" src="chrome://tags/content/file.js"/>
+	<script type="application/x-javascript" src="chrome://tags/content/kgenOptionService.js"/>
+
+	<tabbox style="overflow:auto;" flex="1">
+		<tabs id="degradx-sidebar-tabs">
+			<tab id="tag-list" label="&tags.tabs.list;"/>
+			<tab id="tag-stats" label="&tags.tabs.stats;"/>
+			<tab id="tag-cloud" label="&tags.tabs.cloud;"/>
+			<tab id="tag-export" label="&tags.tabs.export;"/>
+			<tab id="tag-options" label="&tags.tabs.options;"/>
+			<tab id="tag-tags" label="&tags.tabs.tags;"/>
+			<tab id="tag-atts" label="&tags.tabs.atts;"/>
+			<tab id="tag-uri" label="&tags.tabs.uri;"/>
+			<tab id="tag-ignore" label="&tags.tabs.ignore;"/>
+		</tabs>
+
+	        <tabpanels id="tag-list" flex="1">
+			<tabpanel>
+				<vbox flex="1">
+					<groupbox>
+						<caption label="&tags.keywords;"/>
+						<listbox flex="1" id="tag-listbox" rows="18" seltype="multiple" onselect="" context="tag-contextmenu">
+						<listcols>
+							<listcol flex="3"/>
+							<splitter class="list-splitter"/>
+							<listcol flex="1"/>
+							<splitter class="list-splitter"/>
+							<listcol flex="1"/>
+							<splitter class="list-splitter"/>
+							<listcol flex="1"/>
+						</listcols>
+						<listhead>
+							<listheader label="&tags.keywords.name;" id="tag-sortby-name"/>
+							<listheader label="&tags.keywords.repeat;" id="tag-sortby-repeat"/>
+							<listheader label="&tags.keywords.weight;" id="tag-sortby-weight"/>
+							<listheader label="&tags.keywords.position;" id="tag-sortby-aposition"/>
+						</listhead>
+						</listbox>
+						<description value="&tags.keywords.desc;"/>
+						<description value="&tags.keywords.desc2;"/>
+						<hbox>
+							<button label="&tags.keywords.export;" id="tag-keywords2clipboard" flex="1"/>
+							<button label="&tags.keywords.exportall;" id="tag-keywords2clipboardall" flex="1"/>
+						</hbox>
+					</groupbox>
+					<button label="&tags.scan;" id="tag-startscan"/>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<groupbox>
+						<caption label="&tags.stats.words;"/>
+						<hbox><label value="&tags.stats.totalwords;" flex="1"/><label value="" id="stats-totalwords"/></hbox>
+						<!--<hbox><label value="&tags.stats.originalwords;" flex="1"/><label value="" id="stats-originalwords"/></hbox>-->
+						<hbox><label value="&tags.stats.keptwords;" flex="1"/><label value="" id="stats-keptwords"/></hbox>
+						<hbox><label value="&tags.stats.vocable;" flex="1"/><label value="" id="stats-vocable"/></hbox>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.stats.html;"/>
+						<hbox><label value="&tags.stats.totalchars;" flex="1"/><label value="" id="stats-totalchars"/></hbox>
+						<hbox><label value="&tags.stats.efficientchars;" flex="1"/><label value="" id="stats-efficientchars"/></hbox>
+						<hbox><label value="&tags.stats.htmlquality;" flex="1"/><label value="" id="stats-htmlquality"/></hbox>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.stats.dictionnary;"/>
+						<hbox><label value="&tags.stats.totalknown;" flex="1"/><label value="" id="stats-totalknown"/></hbox>
+						<hbox><label value="&tags.stats.totalunknown;" flex="1"/><label value="" id="stats-totalunknown"/></hbox>
+						<hbox><label value="&tags.stats.wordsquality;" flex="1"/><label value="" id="stats-wordsquality"/></hbox>
+					</groupbox>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<iframe id="tag-cloud-browser" flex="1" src="tag-cloud.html" type="chrome" />
+					<hbox>	<label control="tag-cloud-factor" value="&tags.cloud.factor;"/>
+						<textbox id="tag-cloud-factor"/>
+						<button label="&tags.cloud.redraw;" id="tag-cloud-redraw"/>
+					</hbox>
+					<button label="&tags.cloud.clipboard;" id="tag-cloud-clipboard"/>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<groupbox>
+						<caption label="&tags.export.cvs;"/>
+						<label control="tag-export-cvsseparator" value="&tags.export.cvsseparator;"/>
+						<textbox id="tag-export-cvsseparator"/>
+						<label control="tag-export-cvsstring" value="&tags.export.cvsstring;"/>
+						<textbox id="tag-export-cvsstring"/>
+						<checkbox id="tag-export-cvsselection" label="&tags.export.cvsselection;"/>
+						<button id="tag-export-cvssave" label="&tags.export.save;"/>
+					</groupbox>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<groupbox>
+						<caption label="&tags.sort;"/>
+						<menulist id="tag-sort">
+							<menupopup>
+								<menuitem label="&tags.sort.weight;" value="weight"/>
+								<menuitem label="&tags.sort.repeat;" value="repeat"/>
+								<menuitem label="&tags.sort.length;" value="length"/>
+								<menuitem label="&tags.sort.name;" value="name"/>
+								<menuitem label="&tags.sort.fposition;" value="fposition"/>
+								<menuitem label="&tags.sort.aposition;" value="aposition"/>
+							</menupopup>
+						</menulist>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.ignore;"/>
+						<label control="tag-minlength" value="&tags.ignore.minlength;"/>
+						<textbox id="tag-minlength"/>
+						<label control="tag-minweight" value="&tags.ignore.minweight;"/>
+						<textbox id="tag-minweight"/>
+						<label control="tag-minrepeat" value="&tags.ignore.minrepeat;"/>
+						<textbox id="tag-minrepeat"/>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.combinaison;"/>
+						<label control="tag-maxword" value="&tags.combinaison.maxword;"/>
+						<textbox id="tag-maxword"/>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.clipboard;"/>
+						<label control="tag-separator" value="&tags.clipboard.separator;"/>
+						<textbox id="tag-separator"/>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.other;"/>
+						<checkbox id="tag-percent" label="&tags.other.percent;"/>
+						<checkbox id="tag-wordstot" label="&tags.other.wordstot;"/>
+						<checkbox id="tag-useignore" label="&tags.other.ignore;"/>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.wordseparator.caption;"/>
+						<label control="tag-wordseparator" value="&tags.wordseparator;"/>
+						<textbox id="tag-wordseparator"/>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.dictionnary;"/>
+						<menulist id="tag-dictionnary">
+							<menupopup>
+								<menuitem label="&tags.dictionnary.none;" value=""/>
+							</menupopup>
+						</menulist>
+					</groupbox>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<groupbox>
+						<caption label="&tags.tags;"/>
+						<listbox flex="1" id="tag-tagslistbox" rows="18" seltype="multiple">
+						<listcols>
+							<listcol flex="3"/>
+							<splitter class="list-splitter"/>
+							<listcol flex="1"/>
+						</listcols>
+						<listhead>
+							<listheader label="&tags.tags.tag;"/>
+							<listheader label="&tags.weight;"/>
+						</listhead>
+						</listbox>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.edit;"/>
+						<label value="&tags.tags.tag;" for="tag-tagsname"/>
+						<textbox id="tag-tagsname"/>
+						<label value="&tags.weight;" for="tag-tagsweight"/>
+						<textbox id="tag-tagsweight"/>
+						<hbox>
+							<button id="tag-tagsadd" label="&tags.add;" flex="1" disabled="true"/>
+						</hbox>
+					</groupbox>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<groupbox>
+						<caption label="&tags.atts;"/>
+						<listbox flex="1" id="tag-attslistbox" rows="18" seltype="multiple">
+						<listcols>
+							<listcol flex="3"/>
+							<splitter class="list-splitter"/>
+							<listcol flex="1"/>
+						</listcols>
+						<listhead>
+							<listheader label="&tags.atts.att;"/>
+							<listheader label="&tags.weight;"/>
+						</listhead>
+						</listbox>
+					</groupbox>
+					<groupbox>
+						<caption label="&tags.edit;"/>
+						<label value="&tags.tags.tag;" for="tag-attsname"/>
+						<textbox id="tag-attsname"/>
+						<label value="&tags.weight;" for="tag-attsweight"/>
+						<textbox id="tag-attsweight"/>
+						<hbox>
+							<button id="tag-attsadd" label="&tags.add;" flex="1" disabled="true"/>
+						</hbox>
+					</groupbox>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<groupbox>
+						<caption label="&tags.uri;"/>
+						<label value="&tags.uri.hostname;" for="tag-hostname"/>
+						<textbox id="tag-hostname"/>
+						<label value="&tags.uri.pathname;" for="tag-pathname"/>
+						<textbox id="tag-pathname"/>
+					</groupbox>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<groupbox>
+						<caption label="&tags.ilist;"/>
+						<listbox flex="1" id="tag-wordslistbox" rows="20">
+						<listcols>
+							<listcol flex="1"/>
+						</listcols>
+						<listhead>
+							<listheader label="&tags.ilist.iwords;"/>
+						</listhead>
+						</listbox>
+					<description value="&tags.ilist.desc;"/>
+					</groupbox>
+				</vbox>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+	<popupset id="tag-popupset">
+		<menupopup id="tag-contextmenu">
+			<menuitem label="&tags.contextmenu.synonym;" tooltiptext="&tags.contextmenu.synonym.ttt;" id="tag-context-synonym" />
+			<menuitem label="&tags.contextmenu.find;" tooltiptext="&tags.contextmenu.find.ttt;" id="tag-context-find" />
+			<menuitem label="&tags.contextmenu.copy;" tooltiptext="&tags.contextmenu.copy.ttt;" id="tag-context-copy" />
+			<menuitem label="&tags.contextmenu.copyall;" tooltiptext="&tags.contextmenu.copyall.ttt;" id="tag-context-copyall" />
+			<menuitem label="&tags.contextmenu.definition;" tooltiptext="&tags.contextmenu.definition.ttt;" id="tag-context-definition" />
+			<menuitem label="&tags.contextmenu.ignore;" tooltiptext="&tags.contextmenu.ignore.ttt;" id="tag-context-ignore" />
+			<menuseparator />
+			<menuitem label="&tags.contextmenu.contribute;" tooltiptext="&tags.contextmenu.contribute.ttt;" id="tag-context-contribute" />
+		</menupopup>
+	</popupset>
+</window>
