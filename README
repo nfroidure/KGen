@@ -4,6 +4,10 @@
 
 KGen is a Firefox addon. It use XUL and Javascript. You can get more information on the Mozilla Developer Center (https://developper.mozilla.org).
 
+To get KGen for production go there https://addons.mozilla.org/fr/firefox/addon/kgen/ . For the development version, follow the above quick start guide.
+
+More informations on the official web site : http://kgen.elitwork.com
+
 ## Quick start
 
 Create a new Firefox profile for add on development (https://developer.mozilla.org/en/Setting_up_extension_development_environment).
@@ -27,3 +31,5 @@ Have fun!
 PS : Take a look at my other add-ons:
 - BBComposer : https://github.com/nfroidure/BBComposer
 - CanImage : https://github.com/nfroidure/CanImage
+
+PS2 : Have news on Twitter http://twiter.com/nfroidure

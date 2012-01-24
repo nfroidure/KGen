@@ -12,10 +12,9 @@
 	// Getting options
 	this.currentOptions = new kgenOptionService();
 	// Registering sidebar inside BBComposer
-	if(window.parent.myBBComposerManager&&window.parent.myBBComposerManager.focusedBBComposer&&window.parent.myBBComposerManager.focusedBBComposer.editor&&(!window.parent.myBBComposerManager.sidebar||window.parent.myBBComposerManager.sidebarName!='tags'))
+	if(window.parent.myBBComposerManager&&window.parent.myBBComposerManager.focusedBBComposer)
 		{
-		window.parent.myBBComposerManager.sidebarName='tags';
-		window.parent.myBBComposerManager.sidebar=window.parent.document.getElementById("sidebar");
+		window.parent.myBBComposerManager.toggleSidebar('tags', true);
 		}
 	// Getting dictionnary interface
 	var spellclass = "@mozilla.org/spellchecker/myspell;1";
@@ -556,7 +555,8 @@ KgenKeywordTagCloud.prototype.export = function (currentKGen, factor)
 	}
 
 /* Initialisation */
+var ui;
 window.addEventListener('load',function ()
 	{
-	new KgenUI();
+	ui=new KgenUI();
 	},false);
