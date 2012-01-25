@@ -8,7 +8,7 @@
 
 	<script type="application/x-javascript" src="chrome://tags/content/kgen.js"/>
 	<script type="application/x-javascript" src="chrome://tags/content/tags.js"/>
-	<script type="application/x-javascript" src="chrome://tags/content/file.js"/>
+	<script type="application/x-javascript" src="chrome://tags/content/ewkFile.js"/>
 	<script type="application/x-javascript" src="chrome://tags/content/ewkOptionService.js"/>
 
 	<tabbox style="overflow:auto;" flex="1">

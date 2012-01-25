@@ -298,7 +298,7 @@ KgenUI.prototype.keywords2file = function ()
 		{
 		for(var i=0; i<x; i++)
 			string+= stringseparator+selectedItems[i].firstChild.getAttribute('label')+stringseparator+separator+selectedItems[i].firstChild.nextSibling.getAttribute('label')+separator+selectedItems[i].firstChild.nextSibling.nextSibling.getAttribute('label')+separator+selectedItems[i].lastChild.getAttribute('label') + (i<x-1?'\n':'');
-		var myFile = new bbFile(null);
+		var myFile = new ewkFile(null);
 		if(myFile.fromUserCreation(this.currentLocales.getString('extensions.kgen@elitwork.com.cvssave'), 'kgen-'+new Date().getTime()+'.csv',  '*.csv;', this.currentLocales.getString('extensions.kgen@elitwork.com.cvsmime')))
 			myFile.write(string);
 		}
