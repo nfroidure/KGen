@@ -10,7 +10,7 @@
 	// Gettin properties (i18n)
 	this.currentLocales=parent.document.getElementById("kgen-properties");
 	// Getting options
-	this.currentOptions = new kgenOptionService();
+	this.currentOptions = new ewkOptionService('extensions.kgen@elitwork.com.','');
 	// Registering sidebar inside BBComposer
 	if(window.parent.myBBComposerManager&&window.parent.myBBComposerManager.focusedBBComposer)
 		{
@@ -47,40 +47,40 @@ KgenUI.prototype.initEvents = function ()
 		{ this.keywords2clipboard(true); }),false);
 	document.getElementById('tag-startscan').addEventListener('command',this.newEventHandler(this,this.startScan),false);
 	document.getElementById('tag-cloud-factor').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setIntOption('extensions.kgen.cloud.factor',document.getElementById('tag-cloud-factor').value); }),false);
+		{ this.currentOptions.setIntOption('cloud.factor',document.getElementById('tag-cloud-factor').value); }),false);
 	document.getElementById('tag-cloud-redraw').addEventListener('command',this.newEventHandler(this,function()
 		{ this.sortBy(document.getElementById('tag-sort').value); }),false);
 	document.getElementById('tag-cloud-clipboard').addEventListener('command',this.newEventHandler(this,function()
 		{ this.keywordTagcloud.export(); }),false);
 	document.getElementById('tag-export-cvsseparator').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setCharOption('extensions.kgen.cvsseparator',document.getElementById('tag-export-cvsseparator').value); }),false);
+		{ this.currentOptions.setCharOption('cvsseparator',document.getElementById('tag-export-cvsseparator').value); }),false);
 	document.getElementById('tag-export-cvsstring').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setCharOption('extensions.kgen.cvsstring',document.getElementById('tag-export-cvsstring').value); }),false);
+		{ this.currentOptions.setCharOption('cvsstring',document.getElementById('tag-export-cvsstring').value); }),false);
 	document.getElementById('tag-export-cvsselection').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setBoolOption('extensions.kgen.cvsselection',document.getElementById('tag-export-cvsselection').checked); }),false);
+		{ this.currentOptions.setBoolOption('cvsselection',document.getElementById('tag-export-cvsselection').checked); }),false);
 	document.getElementById('tag-export-cvssave').addEventListener('command',this.newEventHandler(this,this.keywords2file),false);
 	document.getElementById('tag-sort').firstChild.addEventListener('popuphiding',this.newEventHandler(this,function()
-		{ this.currentOptions.setCharOption('extensions.kgen.sort',document.getElementById('tag-sort').value); }),false);
+		{ this.currentOptions.setCharOption('sort',document.getElementById('tag-sort').value); }),false);
 	document.getElementById('tag-minlength').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setIntOption('extensions.kgen.minlength',document.getElementById('tag-minlength').value); }),false);
+		{ this.currentOptions.setIntOption('minlength',document.getElementById('tag-minlength').value); }),false);
 	document.getElementById('tag-minweight').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setIntOption('extensions.kgen.minweight',document.getElementById('tag-minweight').value); }),false);
+		{ this.currentOptions.setIntOption('minweight',document.getElementById('tag-minweight').value); }),false);
 	document.getElementById('tag-minrepeat').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setIntOption('extensions.kgen.minrepeat',document.getElementById('tag-minrepeat').value); }),false);
+		{ this.currentOptions.setIntOption('minrepeat',document.getElementById('tag-minrepeat').value); }),false);
 	document.getElementById('tag-maxword').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setIntOption('extensions.kgen.maxword',document.getElementById('tag-maxword').value); }),false);
+		{ this.currentOptions.setIntOption('maxword',document.getElementById('tag-maxword').value); }),false);
 	document.getElementById('tag-separator').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setCharOption('extensions.kgen.separator',document.getElementById('tag-separator').value); }),false);
+		{ this.currentOptions.setCharOption('separator',document.getElementById('tag-separator').value); }),false);
 	document.getElementById('tag-percent').addEventListener('command',this.newEventHandler(this,function()
-		{ this.currentOptions.setBoolOption('extensions.kgen.percent',document.getElementById('tag-percent').checked); }),false);
+		{ this.currentOptions.setBoolOption('percent',document.getElementById('tag-percent').checked); }),false);
 	document.getElementById('tag-wordstot').addEventListener('command',this.newEventHandler(this,function()
-		{ this.currentOptions.setBoolOption('extensions.kgen.wordstot',document.getElementById('tag-wordstot').checked); }),false);
+		{ this.currentOptions.setBoolOption('wordstot',document.getElementById('tag-wordstot').checked); }),false);
 	document.getElementById('tag-useignore').addEventListener('command',this.newEventHandler(this,function()
-		{ this.currentOptions.setBoolOption('extensions.kgen.ignore',document.getElementById('tag-useignore').checked); }),false);
+		{ this.currentOptions.setBoolOption('ignore',document.getElementById('tag-useignore').checked); }),false);
 	document.getElementById('tag-wordseparator').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setCharOption('extensions.kgen.wordseparator',document.getElementById('tag-wordseparator').value); }),false);
+		{ this.currentOptions.setCharOption('wordseparator',document.getElementById('tag-wordseparator').value); }),false);
 	document.getElementById('tag-dictionnary').firstChild.addEventListener('popuphiding',this.newEventHandler(this,function()
-		{ this.currentOptions.setCharOption('extensions.kgen.dictionnary',document.getElementById('tag-dictionnary').value); }),false);
+		{ this.currentOptions.setCharOption('dictionnary',document.getElementById('tag-dictionnary').value); }),false);
 	document.getElementById('tag-tagslistbox').addEventListener('select',this.newEventHandler(this,function()
 		{
 		this.tagsWeightListbox.showItem();
@@ -116,9 +116,9 @@ KgenUI.prototype.initEvents = function ()
 		this.attsWeightListbox.addItem();
 		}),false);
 	document.getElementById('tag-hostname').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setIntOption('extensions.kgen.hostname',document.getElementById('tag-hostname').value); }),false);
+		{ this.currentOptions.setIntOption('hostname',document.getElementById('tag-hostname').value); }),false);
 	document.getElementById('tag-pathname').addEventListener('change',this.newEventHandler(this,function()
-		{ this.currentOptions.setIntOption('extensions.kgen.pathname',document.getElementById('tag-pathname').value); }),false);
+		{ this.currentOptions.setIntOption('pathname',document.getElementById('tag-pathname').value); }),false);
 	document.getElementById('tag-context-ignore').addEventListener('command',this.newEventHandler(this.ignoredWordsListbox,this.ignoredWordsListbox.addItem),false);
 	document.getElementById('tag-context-find').addEventListener('command',this.newEventHandler(this,this.findWord),false);
 	document.getElementById('tag-context-synonym').addEventListener('command',this.newEventHandler(this,this.suggestWord),false);
@@ -133,27 +133,27 @@ KgenUI.prototype.initEvents = function ()
 KgenUI.prototype.loadOptions = function ()
 	{
 	// Initializing fields
-	document.getElementById('tag-sort').value=this.currentOptions.getCharOption('extensions.kgen.sort');
-	document.getElementById('tag-minlength').value=this.currentOptions.getIntOption('extensions.kgen.minlength');
-	document.getElementById('tag-minweight').value=this.currentOptions.getIntOption('extensions.kgen.minweight');
-	document.getElementById('tag-minrepeat').value=this.currentOptions.getIntOption('extensions.kgen.minrepeat');
-	document.getElementById('tag-maxword').value=this.currentOptions.getIntOption('extensions.kgen.maxword');
-	document.getElementById('tag-separator').value=this.currentOptions.getCharOption('extensions.kgen.separator');
-	document.getElementById('tag-wordseparator').value=this.currentOptions.getCharOption('extensions.kgen.wordseparator');
-	document.getElementById('tag-percent').checked=this.currentOptions.getBoolOption('extensions.kgen.percent');
-	document.getElementById('tag-wordstot').checked=this.currentOptions.getBoolOption('extensions.kgen.wordstot');
-	document.getElementById('tag-hostname').value=this.currentOptions.getIntOption('extensions.kgen.hostname');
-	document.getElementById('tag-pathname').value=this.currentOptions.getIntOption('extensions.kgen.pathname');
-	document.getElementById('tag-useignore').checked=this.currentOptions.getBoolOption('extensions.kgen.ignore');
-	document.getElementById('tag-cloud-factor').value=this.currentOptions.getIntOption('extensions.kgen.cloud.factor');
-	document.getElementById('tag-export-cvsseparator').value=this.currentOptions.getCharOption('extensions.kgen.cvsseparator');
-	document.getElementById('tag-export-cvsstring').value=this.currentOptions.getCharOption('extensions.kgen.cvsstring');
-	document.getElementById('tag-export-cvsselection').checked=this.currentOptions.getBoolOption('extensions.kgen.cvsselection');
+	document.getElementById('tag-sort').value=this.currentOptions.getCharOption('sort');
+	document.getElementById('tag-minlength').value=this.currentOptions.getIntOption('minlength');
+	document.getElementById('tag-minweight').value=this.currentOptions.getIntOption('minweight');
+	document.getElementById('tag-minrepeat').value=this.currentOptions.getIntOption('minrepeat');
+	document.getElementById('tag-maxword').value=this.currentOptions.getIntOption('maxword');
+	document.getElementById('tag-separator').value=this.currentOptions.getCharOption('separator');
+	document.getElementById('tag-wordseparator').value=this.currentOptions.getCharOption('wordseparator');
+	document.getElementById('tag-percent').checked=this.currentOptions.getBoolOption('percent');
+	document.getElementById('tag-wordstot').checked=this.currentOptions.getBoolOption('wordstot');
+	document.getElementById('tag-hostname').value=this.currentOptions.getIntOption('hostname');
+	document.getElementById('tag-pathname').value=this.currentOptions.getIntOption('pathname');
+	document.getElementById('tag-useignore').checked=this.currentOptions.getBoolOption('ignore');
+	document.getElementById('tag-cloud-factor').value=this.currentOptions.getIntOption('cloud.factor');
+	document.getElementById('tag-export-cvsseparator').value=this.currentOptions.getCharOption('cvsseparator');
+	document.getElementById('tag-export-cvsstring').value=this.currentOptions.getCharOption('cvsstring');
+	document.getElementById('tag-export-cvsselection').checked=this.currentOptions.getBoolOption('cvsselection');
 	// Gettin' spellchecker options
 	var dictionaries={};
 	var count={};
 	this.curKGenSpellCheckEngine.getDictionaryList(dictionaries,count);
-	var defaultDictionnary = this.currentOptions.getCharOption('extensions.kgen.dictionnary');
+	var defaultDictionnary = this.currentOptions.getCharOption('dictionnary');
 	var dictOption = document.getElementById('tag-dictionnary');
 	var present=false;
 	for(var i=0; i<dictionaries.value.length; i++)
@@ -168,9 +168,9 @@ KgenUI.prototype.loadOptions = function ()
 			}
 		}
 	if(dictionaries.value.length&&!present)
-		this.currentOptions.setCharOption('extensions.kgen.dictionnary',dictionaries.value[0]);
+		this.currentOptions.setCharOption('dictionnary',dictionaries.value[0]);
 	else if(!present)
-		this.currentOptions.setCharOption('extensions.kgen.dictionnary','');
+		this.currentOptions.setCharOption('dictionnary','');
 	// Loading Tags and Attributes weights
 	this.tagsWeightListbox = new KgenWeightListbox(this, 'tags');
 	this.attsWeightListbox = new KgenWeightListbox(this, 'atts');
@@ -208,7 +208,7 @@ KgenUI.prototype.startScan = function ()
 	{
 	var element;
 	// Enabling spellcheck engine
-	var defaultDictionnary = this.currentOptions.getCharOption('extensions.kgen.dictionnary');
+	var defaultDictionnary = this.currentOptions.getCharOption('dictionnary');
 	if(defaultDictionnary)
 		this.curKGenSpellCheckEngine.dictionary = defaultDictionnary;
 	// Getting scan base element
@@ -217,22 +217,22 @@ KgenUI.prototype.startScan = function ()
 	else if(window.parent.getBrowser().contentDocument&&window.parent.getBrowser().contentDocument.body)
 		{ element=window.parent.getBrowser().contentDocument.documentElement; }
 	// Starting KGen
-	this.currentKGen=new KGen(this.currentOptions.getIntOption('extensions.kgen.minlength'),
-		this.currentOptions.getIntOption('extensions.kgen.minrepeat'), this.currentOptions.getIntOption('extensions.kgen.minweight'),
-		this.currentOptions.getIntOptions('extensions.kgen.tags'), this.currentOptions.getIntOptions('extensions.kgen.attributes'),
-		(this.currentOptions.getBoolOption('extensions.kgen.ignore') ? false : this.currentOptions.getArrayOption('extensions.kgen.words')),
-		this.currentOptions.getCharOption('extensions.kgen.wordseparator'), this.currentOptions.getIntOption('extensions.kgen.maxword'),
+	this.currentKGen=new KGen(this.currentOptions.getIntOption('minlength'),
+		this.currentOptions.getIntOption('minrepeat'), this.currentOptions.getIntOption('minweight'),
+		this.currentOptions.getIntOptions('tags'), this.currentOptions.getIntOptions('attributes'),
+		(this.currentOptions.getBoolOption('ignore') ? false : this.currentOptions.getArrayOption('words')),
+		this.currentOptions.getCharOption('wordseparator'), this.currentOptions.getIntOption('maxword'),
 		(defaultDictionnary?this.curKGenSpellCheckEngine:null));
 	// Getting words
 	if((!window.parent.myBBComposerManager)||(!window.parent.myBBComposerManager.focusedBBComposer)||(!window.parent.myBBComposerManager.focusedBBComposer.editor.contentDocument))
 		{
-		this.currentKGen.getWordsFrom(window.parent.getBrowser().contentDocument.location.hostname, this.currentOptions.getIntOption('extensions.kgen.pathname'));
-		this.currentKGen.getWordsFrom(decodeURI(window.parent.getBrowser().contentDocument.location.pathname), this.currentOptions.getIntOption('extensions.kgen.hostname'));
+		this.currentKGen.getWordsFrom(window.parent.getBrowser().contentDocument.location.hostname, this.currentOptions.getIntOption('pathname'));
+		this.currentKGen.getWordsFrom(decodeURI(window.parent.getBrowser().contentDocument.location.pathname), this.currentOptions.getIntOption('hostname'));
 		}
 	this.currentKGen.getElementWords(element,0);
 	// Sorting
 	this.currentKGen.filter();
-	this.currentKGen.sort(this.currentOptions.getCharOption('extensions.kgen.sort'));
+	this.currentKGen.sort(this.currentOptions.getCharOption('sort'));
 	// Filling ui
 	this.keywordListbox.fill();
 	this.keywordTagcloud.fill();
@@ -250,7 +250,7 @@ KgenUI.prototype.startScan = function ()
 
 KgenUI.prototype.keywords2clipboard = function (withRepeatAndWeight,onlySelection)
 	{
-	var separator = this.currentOptions.getCharOption('extensions.kgen.separator');
+	var separator = this.currentOptions.getCharOption('separator');
 	var string='';
 	if(onlySelection)
 		var selectedItems = document.getElementById('tag-listbox').selectedItems;
@@ -266,7 +266,7 @@ KgenUI.prototype.keywords2clipboard = function (withRepeatAndWeight,onlySelectio
 
 KgenUI.prototype.sortBy = function (sorter)
 	{
-	this.currentOptions.setCharOption('extensions.kgen.sort', sorter);
+	this.currentOptions.setCharOption('sort', sorter);
 	document.getElementById('tag-sort').value=sorter;
 	if(this.currentKGen&&this.keywordListbox)
 		{
@@ -278,18 +278,18 @@ KgenUI.prototype.sortBy = function (sorter)
 
 KgenUI.prototype.keywords2file = function ()
 	{
-	var separator = this.currentOptions.getCharOption('extensions.kgen.cvsseparator');
-	var stringseparator = this.currentOptions.getCharOption('extensions.kgen.cvsstring');
+	var separator = this.currentOptions.getCharOption('cvsseparator');
+	var stringseparator = this.currentOptions.getCharOption('cvsstring');
 	var string='';
 	var selectedItems;
-	if(this.currentOptions.getBoolOption('extensions.kgen.cvsselection'))
+	if(this.currentOptions.getBoolOption('cvsselection'))
 		selectedItems = document.getElementById('tag-listbox').selectedItems;
 	else
 		selectedItems = document.getElementById('tag-listbox').getElementsByTagName('listitem');
 	var x = selectedItems.length;
 	if(!x)
 		{
-		if(this.currentOptions.getBoolOption('extensions.kgen.cvsselection'))
+		if(this.currentOptions.getBoolOption('cvsselection'))
 			alert(this.currentLocales.getString('extensions.kgen@elitwork.com.cvsnothingsel'));
 		else
 			alert(this.currentLocales.getString('extensions.kgen@elitwork.com.cvsnothing'));
@@ -379,8 +379,8 @@ KgenKeywordListbox.prototype.empty = function ()
 KgenKeywordListbox.prototype.fill = function ()
 	{
 	this.empty();
-	var withPercents = this.kgenUI.currentOptions.getBoolOption('extensions.kgen.percent');
-	var withWordsTot = this.kgenUI.currentOptions.getBoolOption('extensions.kgen.wordstot');
+	var withPercents = this.kgenUI.currentOptions.getBoolOption('percent');
+	var withWordsTot = this.kgenUI.currentOptions.getBoolOption('wordstot');
 	var x = this.kgenUI.currentKGen.words.length;
 	for(var i=0; i<x; i++)
 		{
@@ -425,7 +425,7 @@ KgenWeightListbox.prototype.empty = KgenKeywordListbox.prototype.empty;
 KgenWeightListbox.prototype.fill = function ()
 	{
 	this.empty();
-	var curTags = this.kgenUI.currentOptions.getIntOptions('extensions.kgen.'+this.type);
+	var curTags = this.kgenUI.currentOptions.getIntOptions(this.type);
 	for(var i in curTags)
 		{
 		var curListitem = document.createElement("listitem");
@@ -453,16 +453,16 @@ KgenWeightListbox.prototype.showItem = function ()
 	}
 KgenWeightListbox.prototype.addItem = function ()
 	{
-	this.kgenUI.currentOptions.setIntOption('extensions.kgen.'+this.type+'.'+document.getElementById('tag-'+this.type+'name').value,document.getElementById('tag-'+this.type+'weight').value);
+	this.kgenUI.currentOptions.setIntOption(''+this.type+'.'+document.getElementById('tag-'+this.type+'name').value,document.getElementById('tag-'+this.type+'weight').value);
 	this.kgenUI.currentOptions.saveOptions();
 	this.kgenUI.currentOptions.initOptions();
 	this.fill();
 	}
 KgenWeightListbox.prototype.deleteItem = function ()
 	{
-	this.kgenUI.currentOptions.clearOption('extensions.kgen.'+this.type+'.'+document.getElementById('tag-'+string+'name').value);
-	//this.kgenUI.currentOptions.setIntOption('extensions.kgen.'+this.type+'.'+document.getElementById('tag-'+string+'name').value,1);
-	this.refresh(this.kgenUI.currentOptions.getIntOptions('extensions.kgen.'+this.type));
+	this.kgenUI.currentOptions.clearOption(''+this.type+'.'+document.getElementById('tag-'+string+'name').value);
+	//this.kgenUI.currentOptions.setIntOption(''+this.type+'.'+document.getElementById('tag-'+string+'name').value,1);
+	this.refresh(this.kgenUI.currentOptions.getIntOptions(''+this.type));
 	}
 	
 var KgenIgnoredWordsListbox = function(kgenUI)
@@ -477,7 +477,7 @@ KgenIgnoredWordsListbox.prototype.empty = KgenKeywordListbox.prototype.empty;
 KgenIgnoredWordsListbox.prototype.fill = function ()
 	{
 	this.empty();
-	var iWords = this.kgenUI.currentOptions.getArrayOption('extensions.kgen.words');
+	var iWords = this.kgenUI.currentOptions.getArrayOption('words');
 	
 	iWords.sort(function(a,b)
 			{
@@ -501,19 +501,19 @@ KgenIgnoredWordsListbox.prototype.fill = function ()
 
 KgenIgnoredWordsListbox.prototype.addItem = function (hEvent)
 	{
-	this.kgenUI.currentOptions.setCharOption('extensions.kgen.words', this.kgenUI.currentOptions.getCharOption('extensions.kgen.words')+'!'+this.kgenUI.keywordListbox.listbox.selectedItem.firstChild.getAttribute('label'));
+	this.kgenUI.currentOptions.setCharOption('words', this.kgenUI.currentOptions.getCharOption('words')+'!'+this.kgenUI.keywordListbox.listbox.selectedItem.firstChild.getAttribute('label'));
 	this.fill();
 	}
 
 KgenIgnoredWordsListbox.prototype.deleteItem = function (hEvent)
 	{
-	var iWords = this.kgenUI.currentOptions.getArrayOption('extensions.kgen.words');
+	var iWords = this.kgenUI.currentOptions.getArrayOption('words');
 	for(var i=0; i<iWords.length; i++)
 		{
-		if(iWords[i]==this.kgenUI.keywordListbox.listbox.selectedItem.firstChild.getAttribute('label'))
+		if(iWords[i]==this.listbox.selectedItem.firstChild.getAttribute('label'))
 			{ iWords.splice(i,1) }
 		}
-	this.kgenUI.currentOptions.setArrayOption('extensions.kgen.words', iWords);
+	this.kgenUI.currentOptions.setArrayOption('words', iWords);
 	this.fill();
 	}
 
@@ -533,7 +533,7 @@ KgenKeywordTagCloud.prototype.empty = function ()
 	}
 KgenKeywordTagCloud.prototype.fill = function ()
 	{
-	var factor=this.kgenUI.currentOptions.getIntOption('extensions.kgen.cloud.factor');
+	var factor=this.kgenUI.currentOptions.getIntOption('cloud.factor');
 	this.empty();
 	var x = this.kgenUI.currentKGen.words.length;
 	var newP=this.browser.contentDocument.createElement('p');
