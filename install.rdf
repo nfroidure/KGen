@@ -4,7 +4,7 @@
 
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="kgen@elitwork.com"
-                   em:version="0.8.1"
+                   em:version="0.8.2"
                    em:name="KGen"
                    em:creator="Nicolas FROIDURE"
                    em:homepageURL="http://kgen.elitwork.com/"
