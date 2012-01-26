@@ -3,7 +3,7 @@
 <!ENTITY tags.tabs.list "Lista">
 <!ENTITY tags.tabs.stats "Estadísticas">
 <!ENTITY tags.tabs.cloud "Nube">
-<!ENTITY tags.tabs.export "Export">
+<!ENTITY tags.tabs.export "Exportar">
 <!ENTITY tags.tabs.options "Opciones">
 <!ENTITY tags.tabs.tags "Etiquetas">
 <!ENTITY tags.tabs.atts "Atributos">
@@ -15,9 +15,9 @@
 <!ENTITY tags.keywords.weight "Ancho">
 <!ENTITY tags.keywords.position "Pos.">
 <!ENTITY tags.keywords.desc "Pulse CTRL para selección múltiple.">
-<!ENTITY tags.keywords.desc2 "Right click on a word to get more infos.">
+<!ENTITY tags.keywords.desc2 "Pulse con el botón derecho en una palabra para obtener sugerencias.">
 <!ENTITY tags.keywords.export "Export words to clipboard">
-<!ENTITY tags.keywords.exportall "Con pesos y repeticiones">
+<!ENTITY tags.keywords.exportall "With Weights and repeats">
 <!ENTITY tags.scan "Escanear">
 <!ENTITY tags.stats.words "Palabras">
 <!ENTITY tags.stats.totalwords "Suma de palabras:">
@@ -35,11 +35,11 @@
 <!ENTITY tags.cloud.factor "Factor de tamaño">
 <!ENTITY tags.cloud.redraw "Redibujar">
 <!ENTITY tags.cloud.clipboard "Colocar el código fuente HTML en el portapapeles">
-<!ENTITY tags.export.cvs "Options d'exportation">
-<!ENTITY tags.export.cvsseparator "Séparateur de champ">
-<!ENTITY tags.export.cvsstring "Délimiteur de chaîne">
-<!ENTITY tags.export.cvsselection "Exporter la sélection uniquement">
-<!ENTITY tags.export.save "Exporter le fichier">
+<!ENTITY tags.export.cvs "Opciones de exportación">
+<!ENTITY tags.export.cvsseparator "Separador de campos">
+<!ENTITY tags.export.cvsstring "Delimitador de cadenas">
+<!ENTITY tags.export.cvsselection "Exportar sólo la selección">
+<!ENTITY tags.export.save "Exportar el archivo">
 <!ENTITY tags.sort "Ordenar palabras">
 <!ENTITY tags.sort.weight "Por ancho">
 <!ENTITY tags.sort.repeat "Por repetición">

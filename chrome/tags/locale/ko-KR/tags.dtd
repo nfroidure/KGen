@@ -3,7 +3,7 @@
 <!ENTITY tags.tabs.list "목록">
 <!ENTITY tags.tabs.stats "시작">
 <!ENTITY tags.tabs.cloud "떼">
-<!ENTITY tags.tabs.export "Export">
+<!ENTITY tags.tabs.export "내보내기">
 <!ENTITY tags.tabs.options "선택사항">
 <!ENTITY tags.tabs.tags "태그">
 <!ENTITY tags.tabs.atts "속성">
@@ -15,9 +15,9 @@
 <!ENTITY tags.keywords.weight "중요도">
 <!ENTITY tags.keywords.position "위치">
 <!ENTITY tags.keywords.desc "다중 선택하려면 CTRL를 누르세요.">
-<!ENTITY tags.keywords.desc2 "Right click on a word to get more infos.">
+<!ENTITY tags.keywords.desc2 "단어의 후보를 얻으려면 단어를 오른쪽 클릭하세요.">
 <!ENTITY tags.keywords.export "Export words to clipboard">
-<!ENTITY tags.keywords.exportall "중요도 및 반복 포함">
+<!ENTITY tags.keywords.exportall "With Weights and repeats">
 <!ENTITY tags.scan "검색!">
 <!ENTITY tags.stats.words "단어">
 <!ENTITY tags.stats.totalwords "단어의 총합:">
@@ -35,11 +35,11 @@
 <!ENTITY tags.cloud.factor "크기 인수">
 <!ENTITY tags.cloud.redraw "다시 그리기">
 <!ENTITY tags.cloud.clipboard "클립보드에 HTML 소스 넣기">
-<!ENTITY tags.export.cvs "Options d'exportation">
-<!ENTITY tags.export.cvsseparator "Séparateur de champ">
-<!ENTITY tags.export.cvsstring "Délimiteur de chaîne">
-<!ENTITY tags.export.cvsselection "Exporter la sélection uniquement">
-<!ENTITY tags.export.save "Exporter le fichier">
+<!ENTITY tags.export.cvs "선택사항 내보내기">
+<!ENTITY tags.export.cvsseparator "필드 구분자">
+<!ENTITY tags.export.cvsstring "줄 구획문자">
+<!ENTITY tags.export.cvsselection "선택된 것만 내보내기">
+<!ENTITY tags.export.save "파일 복사 내보내기">
 <!ENTITY tags.sort "단어 정렬">
 <!ENTITY tags.sort.weight "중요도 순">
 <!ENTITY tags.sort.repeat "반복 순">

@@ -1,47 +1,47 @@
 <!ENTITY tags.name "KGen: генератор ключевых слов">
 <!ENTITY tags.tooltiptext "Просмотр слов документа">
 <!ENTITY tags.tabs.list "Список">
-<!ENTITY tags.tabs.stats "Статистика">
+<!ENTITY tags.tabs.stats "Стат.">
 <!ENTITY tags.tabs.cloud "Облако">
-<!ENTITY tags.tabs.export "Export">
-<!ENTITY tags.tabs.options "Настройки">
+<!ENTITY tags.tabs.export "Экспорт">
+<!ENTITY tags.tabs.options "Настр.">
 <!ENTITY tags.tabs.tags "Теги">
-<!ENTITY tags.tabs.atts "Атрибуты">
+<!ENTITY tags.tabs.atts "Атриб.">
 <!ENTITY tags.tabs.uri "Адрес">
-<!ENTITY tags.tabs.ignore "Пропускать">
+<!ENTITY tags.tabs.ignore "Игнор.">
 <!ENTITY tags.keywords "Список слов">
 <!ENTITY tags.keywords.name "Имя">
 <!ENTITY tags.keywords.repeat "Повторы">
-<!ENTITY tags.keywords.weight "Весомость">
+<!ENTITY tags.keywords.weight "Вес">
 <!ENTITY tags.keywords.position "Поз.">
-<!ENTITY tags.keywords.desc "Для множественного выбора нажмите Ctrl.">
-<!ENTITY tags.keywords.desc2 "Right click on a word to get more infos.">
+<!ENTITY tags.keywords.desc "Для множественного выбора удерживайте нажатой Ctrl.">
+<!ENTITY tags.keywords.desc2 "Получите предположения, щёлкнув на слове правой кнопкой.">
 <!ENTITY tags.keywords.export "Export words to clipboard">
-<!ENTITY tags.keywords.exportall "С весом и повторами">
+<!ENTITY tags.keywords.exportall "With Weights and repeats">
 <!ENTITY tags.scan "Сканировать">
 <!ENTITY tags.stats.words "Слова">
 <!ENTITY tags.stats.totalwords "Всего слов:">
 <!ENTITY tags.stats.originalwords "Различных слов:">
-<!ENTITY tags.stats.vocable "Разнообразие словаря (в &#37;):">
+<!ENTITY tags.stats.vocable "Разнообразие словаря (в процентах):">
 <!ENTITY tags.stats.keptwords "Обработанные слова:">
 <!ENTITY tags.stats.html "HTML документ">
 <!ENTITY tags.stats.totalchars "Всего символов:">
 <!ENTITY tags.stats.efficientchars "Всего текстовых символов:">
-<!ENTITY tags.stats.htmlquality "Разнообразие HTML (в &#37;):">
+<!ENTITY tags.stats.htmlquality "Разнообразие HTML (в процентах):">
 <!ENTITY tags.stats.dictionnary "Словарь">
 <!ENTITY tags.stats.totalknown "Известные слова:">
 <!ENTITY tags.stats.totalunknown "Неизвестные слова:">
-<!ENTITY tags.stats.wordsquality "Разнообразие текста (в &#37;):">
+<!ENTITY tags.stats.wordsquality "Разнообразие текста (в процентах):">
 <!ENTITY tags.cloud.factor "Показатель размера">
 <!ENTITY tags.cloud.redraw "Обновить">
 <!ENTITY tags.cloud.clipboard "Поместить исходный HTML-код в буфер обмена">
-<!ENTITY tags.export.cvs "Options d'exportation">
-<!ENTITY tags.export.cvsseparator "Séparateur de champ">
-<!ENTITY tags.export.cvsstring "Délimiteur de chaîne">
-<!ENTITY tags.export.cvsselection "Exporter la sélection uniquement">
-<!ENTITY tags.export.save "Exporter le fichier">
+<!ENTITY tags.export.cvs "Настройки экспорта">
+<!ENTITY tags.export.cvsseparator "Разделитель полей">
+<!ENTITY tags.export.cvsstring "Ограничитель строки">
+<!ENTITY tags.export.cvsselection "Экспортировать только выделенное">
+<!ENTITY tags.export.save "Экспортировать в файл">
 <!ENTITY tags.sort "Сортировать слова">
-<!ENTITY tags.sort.weight "по показателю весомости">
+<!ENTITY tags.sort.weight "по весу">
 <!ENTITY tags.sort.repeat "по количеству повторов">
 <!ENTITY tags.sort.length "по длине слов">
 <!ENTITY tags.sort.name "по имени">
@@ -49,7 +49,7 @@
 <!ENTITY tags.sort.aposition "по среднему положению">
 <!ENTITY tags.ignore "Пропускать слова,">
 <!ENTITY tags.ignore.minlength "имеющие меньше чем (х) букв">
-<!ENTITY tags.ignore.minweight "имеющие весомость менее чем">
+<!ENTITY tags.ignore.minweight "имеющие вес менее чем">
 <!ENTITY tags.ignore.minrepeat "повторяющиеся менее чем (х) раз">
 <!ENTITY tags.combinaison "Word combination">
 <!ENTITY tags.combinaison.maxword "Combine (x) words max">

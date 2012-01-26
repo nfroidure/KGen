@@ -1,9 +1,9 @@
 <!ENTITY tags.name "KGen: キーワードジェネレータ">
 <!ENTITY tags.tooltiptext "文書の語を表示します">
-<!ENTITY tags.tabs.list "リスト">
-<!ENTITY tags.tabs.stats "Stats">
+<!ENTITY tags.tabs.list "一覧">
+<!ENTITY tags.tabs.stats "統計">
 <!ENTITY tags.tabs.cloud "クラウド">
-<!ENTITY tags.tabs.export "Export">
+<!ENTITY tags.tabs.export "書き出し">
 <!ENTITY tags.tabs.options "オプション">
 <!ENTITY tags.tabs.tags "タグ">
 <!ENTITY tags.tabs.atts "属性">
@@ -15,23 +15,23 @@
 <!ENTITY tags.keywords.weight "重み">
 <!ENTITY tags.keywords.position "位置">
 <!ENTITY tags.keywords.desc "CTRL 押下で複数選択。">
-<!ENTITY tags.keywords.desc2 "Right click on a word to get more infos.">
+<!ENTITY tags.keywords.desc2 "単語で右クリックして語の候補を得ます。">
 <!ENTITY tags.keywords.export "Export words to clipboard">
-<!ENTITY tags.keywords.exportall "重みと繰り返しを含めて追加">
+<!ENTITY tags.keywords.exportall "With Weights and repeats">
 <!ENTITY tags.scan "走査！">
-<!ENTITY tags.stats.words "Words">
-<!ENTITY tags.stats.totalwords "Sum of words :">
-<!ENTITY tags.stats.originalwords "Sum of different words :">
-<!ENTITY tags.stats.vocable "Vocabulary richness (in percents) :">
-<!ENTITY tags.stats.keptwords "Conserved words :">
-<!ENTITY tags.stats.html "HTML Document">
-<!ENTITY tags.stats.totalchars "Total chars :">
-<!ENTITY tags.stats.efficientchars "Total text chars :">
-<!ENTITY tags.stats.htmlquality "HTML Richness (in percents) :">
-<!ENTITY tags.stats.dictionnary "Dictionnary">
-<!ENTITY tags.stats.totalknown "Recognized words :">
-<!ENTITY tags.stats.totalunknown "Unrecognized words :">
-<!ENTITY tags.stats.wordsquality "Text richness (in percents) :">
+<!ENTITY tags.stats.words "語">
+<!ENTITY tags.stats.totalwords "語の合計:">
+<!ENTITY tags.stats.originalwords "異なる語の合計:">
+<!ENTITY tags.stats.vocable "語彙豊富度 (パーセント):">
+<!ENTITY tags.stats.keptwords "保全された語:">
+<!ENTITY tags.stats.html "HTML 文書">
+<!ENTITY tags.stats.totalchars "総文字数:">
+<!ENTITY tags.stats.efficientchars "テキスト総文字数:">
+<!ENTITY tags.stats.htmlquality "HTML 豊富度 (パーセント):">
+<!ENTITY tags.stats.dictionnary "辞書">
+<!ENTITY tags.stats.totalknown "認識された語:">
+<!ENTITY tags.stats.totalunknown "未認識の語:">
+<!ENTITY tags.stats.wordsquality "テキスト豊富度 (パーセント):">
 <!ENTITY tags.cloud.factor "サイズ係数">
 <!ENTITY tags.cloud.redraw "再描画">
 <!ENTITY tags.cloud.clipboard "クリップボードに HTML ソースを加える">
@@ -61,8 +61,8 @@
 <!ENTITY tags.clipboard.separator "キーワード区切り">
 <!ENTITY tags.wordseparator.caption "意味オプション">
 <!ENTITY tags.wordseparator "語の区切り文字">
-<!ENTITY tags.dictionnary "Dictionaries">
-<!ENTITY tags.dictionnary.none "None (disabled)">
+<!ENTITY tags.dictionnary "辞書">
+<!ENTITY tags.dictionnary.none "なし (無効)">
 <!ENTITY tags.tags "タグの重み">
 <!ENTITY tags.tags.tag "タグ">
 <!ENTITY tags.atts "属性の重み">

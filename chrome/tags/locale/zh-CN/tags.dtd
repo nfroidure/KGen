@@ -1,24 +1,24 @@
-<!ENTITY tags.name "KGen : 关键字生成器">
-<!ENTITY tags.tooltiptext "查看文档词汇">
-<!ENTITY tags.tabs.list "列表">
+<!ENTITY tags.name "KGen : Keyword generator">
+<!ENTITY tags.tooltiptext "View document words">
+<!ENTITY tags.tabs.list "List">
 <!ENTITY tags.tabs.stats "Stats">
 <!ENTITY tags.tabs.cloud "Cloud">
 <!ENTITY tags.tabs.export "Export">
-<!ENTITY tags.tabs.options "选项">
-<!ENTITY tags.tabs.tags "标签">
-<!ENTITY tags.tabs.atts "属性">
+<!ENTITY tags.tabs.options "Options">
+<!ENTITY tags.tabs.tags "Tags">
+<!ENTITY tags.tabs.atts "Attributes">
 <!ENTITY tags.tabs.uri "Uri">
-<!ENTITY tags.tabs.ignore "忽略">
-<!ENTITY tags.keywords "单词列表">
-<!ENTITY tags.keywords.name "名称">
-<!ENTITY tags.keywords.repeat "重复度">
-<!ENTITY tags.keywords.weight "分量">
+<!ENTITY tags.tabs.ignore "Ignore">
+<!ENTITY tags.keywords "Word list">
+<!ENTITY tags.keywords.name "Name">
+<!ENTITY tags.keywords.repeat "Repeat">
+<!ENTITY tags.keywords.weight "Weight">
 <!ENTITY tags.keywords.position "Pos.">
-<!ENTITY tags.keywords.desc "按下CTRL键进行多重选择.">
+<!ENTITY tags.keywords.desc "Push CTRL for multiple selection.">
 <!ENTITY tags.keywords.desc2 "Right click on a word to get more infos.">
 <!ENTITY tags.keywords.export "Export words to clipboard">
 <!ENTITY tags.keywords.exportall "With Weights and repeats">
-<!ENTITY tags.scan "扫描">
+<!ENTITY tags.scan "Scan it!">
 <!ENTITY tags.stats.words "Words">
 <!ENTITY tags.stats.totalwords "Sum of words :">
 <!ENTITY tags.stats.originalwords "Sum of different words :">
@@ -40,42 +40,42 @@
 <!ENTITY tags.export.cvsstring "Délimiteur de chaîne">
 <!ENTITY tags.export.cvsselection "Exporter la sélection uniquement">
 <!ENTITY tags.export.save "Exporter le fichier">
-<!ENTITY tags.sort "单词排序">
-<!ENTITY tags.sort.weight "按照分量">
-<!ENTITY tags.sort.repeat "按照重复度">
-<!ENTITY tags.sort.length "按单词长度">
-<!ENTITY tags.sort.name "按名称">
+<!ENTITY tags.sort "Sort words">
+<!ENTITY tags.sort.weight "By weight">
+<!ENTITY tags.sort.repeat "By repetition">
+<!ENTITY tags.sort.length "By word length">
+<!ENTITY tags.sort.name "By name">
 <!ENTITY tags.sort.fposition "By first apparition">
 <!ENTITY tags.sort.aposition "By average position">
-<!ENTITY tags.ignore "忽略单词">
-<!ENTITY tags.ignore.minlength "少于(x)的单词数">
-<!ENTITY tags.ignore.minweight "根据分量">
-<!ENTITY tags.ignore.minrepeat "不能重复少于(x)次">
+<!ENTITY tags.ignore "Ignore words">
+<!ENTITY tags.ignore.minlength "with less than (x) letters">
+<!ENTITY tags.ignore.minweight "With a weight of">
+<!ENTITY tags.ignore.minrepeat "That don&apos;t repeat a least (x) times">
 <!ENTITY tags.combinaison "Word combination">
 <!ENTITY tags.combinaison.maxword "Combine (x) words max">
-<!ENTITY tags.other "其他">
-<!ENTITY tags.other.percent "显示重复度和分量的百分比">
-<!ENTITY tags.other.wordstot "完成单词全部的区分于重复百分比">
-<!ENTITY tags.other.ignore "不使用忽略列表">
-<!ENTITY tags.clipboard "剪贴板选项">
-<!ENTITY tags.clipboard.separator "关键词隔离器">
+<!ENTITY tags.other "Other">
+<!ENTITY tags.other.percent "Show repeat and weight in percents">
+<!ENTITY tags.other.wordstot "Base repetition percentage on real document words total instead of on total displayed words">
+<!ENTITY tags.other.ignore "Don&apos;t use ignore list">
+<!ENTITY tags.clipboard "Clipboard options">
+<!ENTITY tags.clipboard.separator "Keywords separator">
 <!ENTITY tags.wordseparator.caption "Semantic options">
 <!ENTITY tags.wordseparator "Word separator characters">
 <!ENTITY tags.dictionnary "Dictionaries">
 <!ENTITY tags.dictionnary.none "None (disabled)">
-<!ENTITY tags.tags "标签的分量">
-<!ENTITY tags.tags.tag "标签">
-<!ENTITY tags.atts "属性的分量">
-<!ENTITY tags.atts.att "属性">
-<!ENTITY tags.weight "分量">
-<!ENTITY tags.edit "编辑">
-<!ENTITY tags.add "添加/修改">
+<!ENTITY tags.tags "Tag&apos;s weight">
+<!ENTITY tags.tags.tag "Tag">
+<!ENTITY tags.atts "Attribute&apos;s weight">
+<!ENTITY tags.atts.att "Attribute">
+<!ENTITY tags.weight "Weight">
+<!ENTITY tags.edit "Edit">
+<!ENTITY tags.add "Add/Modify">
 <!ENTITY tags.uri "URI Weights">
 <!ENTITY tags.uri.hostname "Domain name">
 <!ENTITY tags.uri.pathname "Path name">
-<!ENTITY tags.ilist "忽略列表">
-<!ENTITY tags.ilist.iwords "忽略单词">
-<!ENTITY tags.ilist.desc "双击移动">
+<!ENTITY tags.ilist "Ignore list">
+<!ENTITY tags.ilist.iwords "Ignored words">
+<!ENTITY tags.ilist.desc "Double click to remove">
 <!ENTITY tags.contextmenu.synonym "Synonyms">
 <!ENTITY tags.contextmenu.synonym.ttt "Search synonyms for this word">
 <!ENTITY tags.contextmenu.find "Find">
