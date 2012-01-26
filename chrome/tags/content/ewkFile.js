@@ -52,11 +52,11 @@ ewkFile.prototype.fromUserSelection = function (message, directory, leafname, fi
 		{ return false; }
 	}
 
-ewkFile.prototype.fromUri = function (url)
+ewkFile.prototype.fromUri = function (uri)
 	{
 	var nfph = Components.classes["@mozilla.org/network/protocol;1?name=file"]
 		.createInstance(Components.interfaces.nsIFileProtocolHandler);
-	this.file = nfph.getFilefromUri(url);
+	this.file = nfph.getFileFromURLSpec(uri);
 	return this.file.exists();
 	}
 ewkFile.prototype.fromPath = function (path)
