@@ -1,18 +1,23 @@
 function ewkFile(file)
 	{
 	if(file)
-		this.file = file;
+		this.fromUri(file);
 	};
 
-ewkFile.prototype.fromUserCreation = function (message, leafname, filter, label)
+ewkFile.prototype.fromUserCreation = function (message, directory, leafname, filter, label)
 	{
 	var nfp = Components.interfaces.nsIFilePicker;
 	var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nfp);
 	fp.init(window, message, nfp.modeSave);
-	if(filter)
-		fp.appendFilter((label ? label : filter), filter);
+	if(directory)
+		{
+		var dir=new ewkFile().fromUri(directory);
+		fp.displayDirectory = dir.file;
+		}
 	if(leafname)
 		fp.defaultString = leafname;
+	if(filter)
+		fp.appendFilter((label ? label : filter), filter);
 	var res = fp.show();
 	if ((res == nfp.returnOK || res == nfp.returnReplace )&&fp.file)
 		{
@@ -23,15 +28,20 @@ ewkFile.prototype.fromUserCreation = function (message, leafname, filter, label)
 		{ return false; }
 	}
 
-ewkFile.prototype.fromUserSelection = function (message, leafname, filter, label)
+ewkFile.prototype.fromUserSelection = function (message, directory, leafname, filter, label)
 	{
 	var nfp = Components.interfaces.nsIFilePicker;
 	var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nfp);
 	fp.init(window, message, nfp.modeOpen);
-	if(filter)
-		fp.appendFilter((label ? label : filter), filter);
+	if(directory)
+		{
+		var dir=new ewkFile().fromUri(directory);
+		fp.displayDirectory = dir.file;
+		}
 	if(leafname)
 		fp.defaultString = leafname;
+	if(filter)
+		fp.appendFilter((label ? label : filter), filter);
 	var res = fp.show();
 	if (res == nfp.returnOK)
 		{
@@ -42,18 +52,18 @@ ewkFile.prototype.fromUserSelection = function (message, leafname, filter, label
 		{ return false; }
 	}
 
-ewkFile.prototype.fromURLSpec = function (url)
+ewkFile.prototype.fromUri = function (url)
 	{
 	var nfph = Components.classes["@mozilla.org/network/protocol;1?name=file"]
 		.createInstance(Components.interfaces.nsIFileProtocolHandler);
-	this.file = nfph.getFileFromURLSpec(url);
+	this.file = nfph.getFilefromUri(url);
 	return this.file.exists();
 	}
-ewkFile.prototype.fromDirectory = function (directory)
+ewkFile.prototype.fromPath = function (path)
 	{
 	this.file =  Components.classes["@mozilla.org/file/local;1"]
 		.createInstance(Components.interfaces.nsILocalFile);
-	this.file.initWithPath(directory);
+	this.file.initWithPath(path);
 	return this.file.exists();
 	}
 ewkFile.prototype.fromUserProfile = function (filename, create)
@@ -61,14 +71,14 @@ ewkFile.prototype.fromUserProfile = function (filename, create)
 	var profile = Components.classes["@mozilla.org/file/directory_service;1"]
 		.getService(Components.interfaces.nsIProperties)
 		.get("ProfD", Components.interfaces.nsIFile);
-	return this.fromDirectory(profile.path + filename);
+	return this.fromPath(profile.path + filename);
 	}
 ewkFile.prototype.fromTempDirectory = function (filename)
 	{
 	var tempfile = Components.classes["@mozilla.org/file/directory_service;1"]
 		.getService(Components.interfaces.nsIProperties)
         .get("TmpD", Components.interfaces.nsIFile);
-	return this.fromDirectory(tempfile.path + filename);
+	return this.fromPath(tempfile.path + filename);
 	}
 ewkFile.prototype.getUri = function ()
 	{
