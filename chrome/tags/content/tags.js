@@ -7,15 +7,28 @@
 	this.tagsWeightListbox=null;
 	this.attsWeightListbox=null;
 	this.ignoredWordsListbox=null;
+	// Load events
+	this.loadHandler=ewkLib.newEventHandler(this,this.load);
+	window.addEventListener('load', this.loadHandler, false);
+	this.unLoadHandler=ewkLib.newEventHandler(this,this.unLoad);
+	document.addEventListener('unload', this.unLoadHandler, false);
+	}
+
+KgenUI.prototype.load = function ()
+	{
+	document.removeEventListener('load', this.loadHandler, false);
 	// Gettin properties (i18n)
 	this.currentLocales=parent.document.getElementById("kgen-properties");
 	// Getting options
 	this.currentOptions = new ewkOptionService('extensions.kgen@elitwork.com.','');
 	// Registering sidebar inside BBComposer
-	if(window.parent.myBBComposerManager&&window.parent.myBBComposerManager.focusedBBComposer)
-		{
-		window.parent.myBBComposerManager.toggleSidebar('tags', true);
-		}
+	var evt = window.parent.document.createEvent('Events');
+	evt.initEvent('sidebarload', true, true);
+	evt.sidebarWindow=this;
+	evt.sidebarName='tags';
+	evt.standAlone=true;
+	if(window.parent)
+		window.parent.dispatchEvent(evt);
 	// Getting dictionnary interface
 	var spellclass = "@mozilla.org/spellchecker/myspell;1";
 	if ("@mozilla.org/spellchecker/hunspell;1" in Components.classes)
@@ -29,105 +42,124 @@
 	this.keywordListbox = new KgenKeywordListbox(this);
 	this.keywordTagcloud = new KgenKeywordTagCloud(this);
 	}
-
+KgenUI.prototype.unLoad = function ()
+	{
+	document.removeEventListener('unload', this.unLoadHandler, false);
+	if(this.editorManager)
+		this.editorManager.toggleSidebar('tags',false);
+	}
 KgenUI.prototype.initEvents = function ()
 	{
-	window.addEventListener('unload',this.newEventHandler(this,this.unload),false);
-	document.getElementById('tag-sortby-name').addEventListener('click',this.newEventHandler(this,function()
+	window.addEventListener('unload',ewkLib.newEventHandler(this,this.unload),false);
+	document.getElementById('tag-sortby-name').addEventListener('click',ewkLib.newEventHandler(this,function()
 		{ this.sortBy('name'); }),false);
-	document.getElementById('tag-sortby-repeat').addEventListener('click',this.newEventHandler(this,function()
+	document.getElementById('tag-sortby-repeat').addEventListener('click',ewkLib.newEventHandler(this,function()
 		{ this.sortBy('repeat'); }),false);
-	document.getElementById('tag-sortby-weight').addEventListener('click',this.newEventHandler(this,function()
+	document.getElementById('tag-sortby-weight').addEventListener('click',ewkLib.newEventHandler(this,function()
 		{ this.sortBy('weight'); }),false);
-	document.getElementById('tag-sortby-aposition').addEventListener('click',this.newEventHandler(this,function()
+	document.getElementById('tag-sortby-aposition').addEventListener('click',ewkLib.newEventHandler(this,function()
 		{ this.sortBy('aposition'); }),false);
-	document.getElementById('tag-keywords2clipboard').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-keywords2clipboard').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{ this.keywords2clipboard(false); }),false);
-	document.getElementById('tag-keywords2clipboardall').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-keywords2clipboardall').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{ this.keywords2clipboard(true); }),false);
-	document.getElementById('tag-startscan').addEventListener('command',this.newEventHandler(this,this.startScan),false);
-	document.getElementById('tag-cloud-factor').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-startscan').addEventListener('command',ewkLib.newEventHandler(this,this.startScan),false);
+	document.getElementById('tag-cloud-factor').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setIntOption('cloud.factor',document.getElementById('tag-cloud-factor').value); }),false);
-	document.getElementById('tag-cloud-redraw').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-cloud-redraw').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{ this.sortBy(document.getElementById('tag-sort').value); }),false);
-	document.getElementById('tag-cloud-clipboard').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-cloud-clipboard').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{ this.keywordTagcloud.export(); }),false);
-	document.getElementById('tag-export-cvsseparator').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-export-cvsseparator').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setCharOption('cvsseparator',document.getElementById('tag-export-cvsseparator').value); }),false);
-	document.getElementById('tag-export-cvsstring').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-export-cvsstring').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setCharOption('cvsstring',document.getElementById('tag-export-cvsstring').value); }),false);
-	document.getElementById('tag-export-cvsselection').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-export-cvsselection').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setBoolOption('cvsselection',document.getElementById('tag-export-cvsselection').checked); }),false);
-	document.getElementById('tag-export-cvssave').addEventListener('command',this.newEventHandler(this,this.keywords2file),false);
-	document.getElementById('tag-sort').firstChild.addEventListener('popuphiding',this.newEventHandler(this,function()
+	document.getElementById('tag-export-cvssave').addEventListener('command',ewkLib.newEventHandler(this,this.keywords2file),false);
+	document.getElementById('tag-sort').firstChild.addEventListener('popuphiding',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setCharOption('sort',document.getElementById('tag-sort').value); }),false);
-	document.getElementById('tag-minlength').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-minlength').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setIntOption('minlength',document.getElementById('tag-minlength').value); }),false);
-	document.getElementById('tag-minweight').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-minweight').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setIntOption('minweight',document.getElementById('tag-minweight').value); }),false);
-	document.getElementById('tag-minrepeat').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-minrepeat').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setIntOption('minrepeat',document.getElementById('tag-minrepeat').value); }),false);
-	document.getElementById('tag-maxword').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-maxword').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setIntOption('maxword',document.getElementById('tag-maxword').value); }),false);
-	document.getElementById('tag-separator').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-separator').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setCharOption('separator',document.getElementById('tag-separator').value); }),false);
-	document.getElementById('tag-percent').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-percent').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setBoolOption('percent',document.getElementById('tag-percent').checked); }),false);
-	document.getElementById('tag-wordstot').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-wordstot').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setBoolOption('wordstot',document.getElementById('tag-wordstot').checked); }),false);
-	document.getElementById('tag-useignore').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-useignore').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setBoolOption('ignore',document.getElementById('tag-useignore').checked); }),false);
-	document.getElementById('tag-wordseparator').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-wordseparator').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setCharOption('wordseparator',document.getElementById('tag-wordseparator').value); }),false);
-	document.getElementById('tag-dictionnary').firstChild.addEventListener('popuphiding',this.newEventHandler(this,function()
+	document.getElementById('tag-dictionnary').firstChild.addEventListener('popuphiding',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setCharOption('dictionnary',document.getElementById('tag-dictionnary').value); }),false);
-	document.getElementById('tag-tagslistbox').addEventListener('select',this.newEventHandler(this,function()
+	document.getElementById('tag-tagslistbox').addEventListener('select',ewkLib.newEventHandler(this,function()
 		{
 		this.tagsWeightListbox.showItem();
 		this.tagsWeightListbox.activateCommands();
 		}),false);
-	document.getElementById('tag-tagsname').addEventListener('focus',this.newEventHandler(this,function()
+	document.getElementById('tag-tagsname').addEventListener('focus',ewkLib.newEventHandler(this,function()
 		{
 		this.tagsWeightListbox.activateCommands();
 		}),false);
-	document.getElementById('tag-tagsweight').addEventListener('focus',this.newEventHandler(this,function()
+	document.getElementById('tag-tagsweight').addEventListener('focus',ewkLib.newEventHandler(this,function()
 		{
 		this.tagsWeightListbox.activateCommands();
 		}),false);
-	document.getElementById('tag-tagsadd').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-tagsadd').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{
 		this.tagsWeightListbox.addItem();
 		}),false);
-	document.getElementById('tag-attslistbox').addEventListener('select',this.newEventHandler(this,function()
+	document.getElementById('tag-attslistbox').addEventListener('select',ewkLib.newEventHandler(this,function()
 		{
 		this.attsWeightListbox.showItem();
 		this.attsWeightListbox.activateCommands();
 		}),false);
-	document.getElementById('tag-attsname').addEventListener('focus',this.newEventHandler(this,function()
+	document.getElementById('tag-attsname').addEventListener('focus',ewkLib.newEventHandler(this,function()
 		{
 		this.attsWeightListbox.activateCommands();
 		}),false);
-	document.getElementById('tag-attsweight').addEventListener('focus',this.newEventHandler(this,function()
+	document.getElementById('tag-attsweight').addEventListener('focus',ewkLib.newEventHandler(this,function()
 		{
 		this.attsWeightListbox.activateCommands();
 		}),false);
-	document.getElementById('tag-attsadd').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-attsadd').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{
 		this.attsWeightListbox.addItem();
 		}),false);
-	document.getElementById('tag-hostname').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-hostname').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setIntOption('hostname',document.getElementById('tag-hostname').value); }),false);
-	document.getElementById('tag-pathname').addEventListener('change',this.newEventHandler(this,function()
+	document.getElementById('tag-pathname').addEventListener('change',ewkLib.newEventHandler(this,function()
 		{ this.currentOptions.setIntOption('pathname',document.getElementById('tag-pathname').value); }),false);
-	document.getElementById('tag-context-ignore').addEventListener('command',this.newEventHandler(this.ignoredWordsListbox,this.ignoredWordsListbox.addItem),false);
-	document.getElementById('tag-context-find').addEventListener('command',this.newEventHandler(this,this.findWord),false);
-	document.getElementById('tag-context-synonym').addEventListener('command',this.newEventHandler(this,this.suggestWord),false);
-	document.getElementById('tag-context-definition').addEventListener('command',this.newEventHandler(this,this.defineWord),false);
-	document.getElementById('tag-context-copy').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-context-ignore').addEventListener('command',ewkLib.newEventHandler(this.ignoredWordsListbox,this.ignoredWordsListbox.addItem),false);
+	document.getElementById('tag-context-find').addEventListener('command',ewkLib.newEventHandler(this,this.findWord),false);
+	document.getElementById('tag-context-synonym').addEventListener('command',ewkLib.newEventHandler(this,this.suggestWord),false);
+	document.getElementById('tag-context-definition').addEventListener('command',ewkLib.newEventHandler(this,this.defineWord),false);
+	document.getElementById('tag-context-copy').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{ this.keywords2clipboard(false,true); }),false);
-	document.getElementById('tag-context-copyall').addEventListener('command',this.newEventHandler(this,function()
+	document.getElementById('tag-context-copyall').addEventListener('command',ewkLib.newEventHandler(this,function()
 		{ this.keywords2clipboard(true,true); }),false);
-	document.getElementById('tag-context-contribute').addEventListener('command',this.newEventHandler(this,this.contribute),false);
+	document.getElementById('tag-context-contribute').addEventListener('command',ewkLib.newEventHandler(this,this.contribute),false);
+	}
+
+KgenUI.prototype.run = function (editorManager)
+	{
+	this.editorManager=editorManager;
+	this.displayHandler=ewkLib.newEventHandler(this,this.display);
+	document.addEventListener('display', this.displayHandler, false);
+	}
+
+KgenUI.prototype.display = function (hEvent)
+	{
+	var curElement = this.editorManager.focusedBBComposer.getSelectedElement();
+	if(curElement&&curElement.nodeName.toLowerCase()!='body')
+		this.startScan();
 	}
 
 KgenUI.prototype.loadOptions = function ()
@@ -193,17 +225,6 @@ KgenUI.prototype.unload = function ()
 	this.ignoredWordsListbox=null;
 	}
 
-KgenUI.prototype.newEventHandler = function (obj,method,handler)
-	{
-	var fx = method;
-	if(handler)
-		{
-		window[handler] = function () { return fx.apply(obj, arguments); };
-		return window[handler];
-		}
-	return function () { return fx.apply(obj, arguments); }
-	}
-
 KgenUI.prototype.startScan = function ()
 	{
 	var element;
@@ -212,8 +233,8 @@ KgenUI.prototype.startScan = function ()
 	if(defaultDictionnary)
 		this.curKGenSpellCheckEngine.dictionary = defaultDictionnary;
 	// Getting scan base element
-	if(window.parent.myBBComposerManager&&window.parent.myBBComposerManager.focusedBBComposer&&window.parent.myBBComposerManager.focusedBBComposer.editor.contentDocument)
-		{ element=window.parent.myBBComposerManager.focusedBBComposer.editor.contentDocument.body; }
+	if(this.editorManager&&this.editorManager.focusedBBComposer&&this.editorManager.focusedBBComposer.editor.contentDocument)
+		{ element=this.editorManager.focusedBBComposer.editor.contentDocument.body; }
 	else if(window.parent.getBrowser().contentDocument&&window.parent.getBrowser().contentDocument.body)
 		{ element=window.parent.getBrowser().contentDocument.documentElement; }
 	// Starting KGen
@@ -224,7 +245,7 @@ KgenUI.prototype.startScan = function ()
 		this.currentOptions.getCharOption('wordseparator'), this.currentOptions.getIntOption('maxword'),
 		(defaultDictionnary?this.curKGenSpellCheckEngine:null));
 	// Getting words
-	if((!window.parent.myBBComposerManager)||(!window.parent.myBBComposerManager.focusedBBComposer)||(!window.parent.myBBComposerManager.focusedBBComposer.editor.contentDocument))
+	if((!this.editorManager)||(!this.editorManager.focusedBBComposer)||(!this.editorManager.focusedBBComposer.editor.contentDocument))
 		{
 		this.currentKGen.getWordsFrom(window.parent.getBrowser().contentDocument.location.hostname, this.currentOptions.getIntOption('pathname'));
 		this.currentKGen.getWordsFrom(decodeURI(window.parent.getBrowser().contentDocument.location.pathname), this.currentOptions.getIntOption('hostname'));
@@ -495,7 +516,7 @@ KgenIgnoredWordsListbox.prototype.fill = function ()
 		curListcell.setAttribute("label", iWords[i]);
 		curListitem.appendChild(curListcell);
 		this.listbox.appendChild(curListitem);
-		curListitem.addEventListener('dblclick',this.kgenUI.newEventHandler(this,this.deleteItem),false);
+		curListitem.addEventListener('dblclick',ewkLib.newEventHandler(this,this.deleteItem),false);
 		}
 	}
 
@@ -555,8 +576,4 @@ KgenKeywordTagCloud.prototype.export = function (currentKGen, factor)
 	}
 
 /* Initialisation */
-var ui;
-window.addEventListener('load',function ()
-	{
-	ui=new KgenUI();
-	},false);
+var ui=new KgenUI();

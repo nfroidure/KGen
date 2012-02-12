@@ -6,10 +6,11 @@
 <window id="style_sidebar" title="&tags.name;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<script type="application/x-javascript" src="chrome://tags/content/kgen.js"/>
-	<script type="application/x-javascript" src="chrome://tags/content/tags.js"/>
+	<script type="application/x-javascript" src="chrome://tags/content/ewk/ewkLib.js"/>
 	<script type="application/x-javascript" src="chrome://tags/content/ewk/ewkFile.js"/>
 	<script type="application/x-javascript" src="chrome://tags/content/ewk/ewkOptionService.js"/>
+	<script type="application/x-javascript" src="chrome://tags/content/kgen.js"/>
+	<script type="application/x-javascript" src="chrome://tags/content/tags.js"/>
 
 	<tabbox style="overflow:auto;" flex="1">
 		<tabs id="degradx-sidebar-tabs">

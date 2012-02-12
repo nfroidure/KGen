@@ -8,7 +8,4 @@
 	<menupopup id="bbcomposer-sidebar-button-mpopup">
 		<menuitem observes="bbcomp-tags-sidebar" id="bbcomposer-tags-sidebar-button"/>
 	</menupopup>
-	<menupopup id="bbcomp-sidebar-menu-mpopup">
-		<menuitem observes="bbcomp-tags-sidebar" id="bbcomp-tags-sidebar-menuitem"/>
-	</menupopup>
 </overlay>
