@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://kgen/locale/tags.dtd">
+
+<overlay id="kgen-bbcomposer"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<menupopup id="bbcomposer-sidebar-button-mpopup">
+		<menuitem observes="kgen-sidebar" id="kgen-sidebar-button"/>
+	</menupopup>
+</overlay>

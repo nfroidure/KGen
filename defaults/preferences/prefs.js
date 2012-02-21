@@ -1,4 +1,4 @@
-pref("extensions.kgen@elitwork.com.description","chrome://tags/locale/tags.properties");
+pref("extensions.kgen@elitwork.com.description","chrome://kgen/locale/kgen.properties");
 pref("extensions.kgen@elitwork.com.sort","weight");
 pref("extensions.kgen@elitwork.com.cvsseparator",",");
 pref("extensions.kgen@elitwork.com.cvsstring","\"");

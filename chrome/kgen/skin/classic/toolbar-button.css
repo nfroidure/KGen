@@ -1,0 +1,9 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#kgen-toolbarbutton, #kgen-addonbarbutton {
+	list-style-image: url("chrome://kgen/skin/kgen.png");
+}
+
+toolbar[iconsize="small"] #kgen-toolbarbutton, toolbar[iconsize="small"] #kgen-addonbarbutton {
+	list-style-image: url("chrome://kgen/skin/kgen_small.png");
+}

@@ -8,7 +8,7 @@
                    em:name="KGen"
                    em:creator="Nicolas FROIDURE"
                    em:homepageURL="http://kgen.elitwork.com/"
-                   em:iconURL="chrome://tags/content/logo.png"
+                   em:iconURL="chrome://kgen/content/logo.png"
                    em:type="2">
     <em:targetApplication RDF:resource="rdf:#$arpP13"/>
   </RDF:Description>
