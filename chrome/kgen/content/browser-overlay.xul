@@ -15,7 +15,7 @@
 	</stringbundleset>
 
 	<menupopup id="viewSidebarMenu">
-		<menuitem observes="bbcomp-kgen-sidebar" id="bbcomp-kgen-menuitem"/>
+		<menuitem observes="kgen-sidebar" id="bbcomp-kgen-menuitem"/>
 	</menupopup>
 
 	<toolbarpalette id="BrowserToolbarPalette">
