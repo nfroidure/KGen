@@ -11,12 +11,12 @@
 	this.loadHandler=ewkLib.newEventHandler(this,this.load);
 	window.addEventListener('load', this.loadHandler, false);
 	this.unLoadHandler=ewkLib.newEventHandler(this,this.unLoad);
-	document.addEventListener('unload', this.unLoadHandler, false);
+	window.addEventListener('unload', this.unLoadHandler, false);
 	}
 
 KgenUI.prototype.load = function ()
 	{
-	document.removeEventListener('load', this.loadHandler, false);
+	window.removeEventListener('load', this.loadHandler, false);
 	// Gettin properties (i18n)
 	this.currentLocales=parent.document.getElementById("kgen-properties");
 	// Getting options
@@ -44,7 +44,7 @@ KgenUI.prototype.load = function ()
 	}
 KgenUI.prototype.unLoad = function ()
 	{
-	document.removeEventListener('unload', this.unLoadHandler, false);
+	window.removeEventListener('unload', this.unLoadHandler, false);
 	if(this.editorManager)
 		this.editorManager.toggleSidebar('kgen',false);
 	}
