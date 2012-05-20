@@ -1,9 +1,0 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-#tags-toolbarbutton, #tags-addonbarbutton {
-	list-style-image: url("chrome://tags/skin/kgen.png");
-}
-
-toolbar[iconsize="small"] #tags-toolbarbutton, toolbar[iconsize="small"] #tags-addonbarbutton {
-	list-style-image: url("chrome://tags/skin/kgen_small.png");
-}
