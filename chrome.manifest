@@ -1,19 +1,19 @@
 content  kgen   chrome/kgen/content/
-locale   kgen   de   chrome/kgen/locale/de/
+#locale   kgen   de   chrome/kgen/locale/de/
 locale   kgen   en-US   chrome/kgen/locale/en-US/
-locale   kgen   es-ES   chrome/kgen/locale/es-ES/
-locale   kgen   fr   chrome/kgen/locale/fr/
-locale   kgen   it   chrome/kgen/locale/it/
-locale   kgen   ja-JP   chrome/kgen/locale/ja-JP/
-locale   kgen   ko-KR   chrome/kgen/locale/ko-KR/
-locale   kgen   nl   chrome/kgen/locale/nl/
-locale   kgen   pl   chrome/kgen/locale/pl/
-locale   kgen   pt-BR   chrome/kgen/locale/pt-BR/
-locale   kgen   ru-RU   chrome/kgen/locale/ru-RU/
-locale   kgen   sv-SE   chrome/kgen/locale/sv-SE/
-locale   kgen   tr   chrome/kgen/locale/tr/
-locale   kgen   uk-UA   chrome/kgen/locale/uk-UA/
-locale   kgen   zh-CN   chrome/kgen/locale/zh-CN/
+#locale   kgen   es-ES   chrome/kgen/locale/es-ES/
+#locale   kgen   fr   chrome/kgen/locale/fr/
+#locale   kgen   it   chrome/kgen/locale/it/
+#locale   kgen   ja-JP   chrome/kgen/locale/ja-JP/
+#locale   kgen   ko-KR   chrome/kgen/locale/ko-KR/
+#locale   kgen   nl   chrome/kgen/locale/nl/
+#locale   kgen   pl   chrome/kgen/locale/pl/
+#locale   kgen   pt-BR   chrome/kgen/locale/pt-BR/
+#locale   kgen   ru-RU   chrome/kgen/locale/ru-RU/
+#locale   kgen   sv-SE   chrome/kgen/locale/sv-SE/
+#locale   kgen   tr   chrome/kgen/locale/tr/
+#locale   kgen   uk-UA   chrome/kgen/locale/uk-UA/
+#locale   kgen   zh-CN   chrome/kgen/locale/zh-CN/
 skin  kgen   classic   chrome/kgen/skin/classic/
 overlay chrome://browser/content/browser.xul  chrome://kgen/content/browser-overlay.xul
 overlay chrome://bbcomposer/content/bbcomposer.xul  chrome://kgen/content/bbcomposer-overlay.xul
