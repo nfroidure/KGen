@@ -1,0 +1,110 @@
+# Fichier de conjugaisons : dans l'ordre
+# Indicatif : présent, futur simple, imparfait, passé simple, (passé composé, futur antérieur, passé antérieur, plus-que-parfait => auxiliaire + participe), 
+# Subjonctif : présent, passé, imparfait, (Plus-que-parfait => auxiliaire + participe)
+# Conditionnel : présent, (passé => auxiliaire + participe)
+# Participe : présent, passé
+
+# Avoir
+(a|as|avons|avez|ont)/avoir
+(aurai|auras|aura|aurons|aurez|auront)/avoir
+(avais|avait|avions|aviez|avaient)/avoir
+(eus|eus|eut|eûmes|eûtes|eurent)/avoir
+(aie|aies|ait|ayons|ayez|aient)/avoir
+(eusse|eusses|eût|eussions|eussiez|eussent)/avoir
+(ayant|ayants)/avoir
+(eu|eue|eus|eues)/avoir
+# Etre
+(suis|es|est|sommes|êtes|sont)/être
+(serai|seras|sera|serons|serez|seront)/être
+(étais|était|étions|étiez|étaient)/être
+(fus|fut|fûmes|fûtes|furent)/être
+(sois|soit|soyons|soyez|soient)/être
+(fusse|fusses|fût|fussions|fussiez|fussent)/être
+(étant|étants)/être
+(été,étés)/être
+# Verbes du 1er groupe
+## Tout
+(*e|*es|*ons|*ez|*ent)/*er
+(*erai|*eras|*era|*erons|*erez|*eront)/*er
+(*ais|*eais|*ait|*eait|*ions|*iez|*aient|*eaient)/*er
+(*ai|*as|*a|*âmes|*âtes|*èrent)/*er
+#(*e|*es|*ions|*iez|*ent)/*er
+(*asse|*asses|*ât|*assions|*assiez|*assent)/*er
+(*erais|*erait|*erions|*eriez|*eraient)/*er
+(*issant|*issants)/*er
+(*é|*ée|*és|*ées)/*er
+## verbes en "yer"
+(*ie|*ies|*ient)/*yer
+(*ierai|*ieras|*iera|*ierons|*ierez|*ieront)/*yer
+(*ierais|*ierais|*ierait|*ierions|*ieriez|*ieraient)/*yer
+#(yais|*yais|*yait|*yions|*yiez|*yaient)/*yer
+## verbes en "oyer"
+(*errai|*erras|*erra|*errons|*errez|*erront)/*oyer
+(*errais|*errais|*errait|*errions|*erriez|*erraient)/*oyer
+##  verbes en "cer"
+*çons/cer
+(*çais|*çais|*çait|*çaient)/cer
+(*çai|*ças|*ça|*çâmes|*çâtes|*cèrent)/cer
+# Verbes du 2eme groupe
+(*i|*is|*it|*issons|*issez|*issent)/*ir
+(*irai|*iras|*ira|*irons|irez|*iront)/*ir
+(*issais|*issait|*issions|*issiez|*issaient)/*ir
+(*us|*ut|*ûmes|*ûtes|*urent)/*ir
+(*isse|*isses|*ît|*issions|*issiez|*issent)/*ir
+# Subjonctif imparfait = subjonctif présent
+(*i|*ie|*is|*ies)/*ir
+# Verbes du 3eme groupe
+# Aller
+(vais|vas|va|allons|allez|vont)/aller
+(irai|iras|ira|irons|irez|iront)/aller
+(aille|ailles|allions|alliez|aillent)/aller
+# Venir
+(viens|vient|venons|venez|viennent)/venir
+(viendrai|viendras|viendra|viendrons|viendrez|viendront)/venir
+(vienne|viennes|venions|veniez|viennent)/venir
+(vinsse|vinsses|vînt|vinssions|vinssiez|vinssent)/venir
+(venu|venus|venue|venues)/venir
+
+Acquérir, bouillir, courir, cueillir, dormir, faillir, fuir, mentir, mourir, ouvrir, tressaillir, venir
+Asseoir ou assoir, avoir, devoir, émouvoir, falloir, pleuvoir, pouvoir, recevoir, savoir, valoir, voir, vouloir
+Apprendre, comprendre, entendre, fendre, prendre, rendre, suspendre, tendre
+Absoudre, dissoudre, résoudre
+Coudre, moudre, recoudre
+Atteindre, ceindre, contraindre, craindre, feindre, joindre, peindre, plaindre, poindre, teindre
+Admettre, battre, combattre, débattre, émettre, mettre, omettre, permettre, promettre, transmettre
+Apparaître ou apparaitre, connaître ou connaitre, disparaître ou disparaitre, naître ou naitre, paître ou paitre, paraître ou paraitre
+Accroître ou accroitre, croître ou croitre, décroître ou décroitre
+Braire, déplaire, distraire, extraire, faire, plaire, soustraire, taire, traire
+Accroire, boire, croire, mécroire
+Conduire, construire, cuire, déduire, détruire, enduire, induire, instruire, luire, nuire
+Contredire, dire, écrire, élire, frire, inscrire, interdire, lire, maudire, prédire, rire, suffire
+Conclure, exclure, inclure
+
+
+
+
+#pluriels
+*s/*
+*aux/*au
+*aux/*al
+*aux/*ail
+*eaux/*eau
+*eux/*eu
+*oux/*ou
+yeux/œil
+aulx/ail
+cieux/ciel
+aïeux/aïeul
+#On forme le pluriel des noms  en ajoutant un "s" au singulier. Cette règle, bien entendu, souffre quelques exceptions.
+#    - Les noms en "au" et "eau" forment le pluriel en "x" (Un bureau, des bureaux. Un flûtiau, des flûtiaux) sauf : "landaus, sarraus".
+#    - Les noms en "eu" forment le pluriel en "x" (Un feu, des feux. Un jeu, des jeux) sauf : "bleus, pneus".
+#    - Les noms en "ou" forment le pluriel en "s" (Un trou, des trous) sauf : "poux, hiboux, choux, joujoux, genoux, cailloux, bijoux".
+#    - Les noms en "al" forment le pluriel en "aux" (Un cheval, des chevaux. Un bocal, des bocaux) sauf : "cal, bal, carnaval, pal, récital, régal, festival, chacal" qui le font en "s".
+#    - Les noms en "ail" forment le pluriel en "s" sauf : "bail, corail, émail, gemmail, soupirail, travail, vantail et vitrail" qui le font en "aux".
+#    Il y a également des pluriels irréguliers :
+#    Bétail forme au pluriel "bestiaux" ;
+#    Bétail a un pluriel bétails peu utilisé ;
+#    Le nom composé crédit-bail forme au pluriel "crédits-bails" ;
+#    Le pluriel corails est employé pour des objets fabriqués dans cette matière, pour la partie rouge de la coquille Saint-Jacques, du homard ;
+#    Le pluriel travails se rapporte à l'instrument du maréchal-ferrant (en technologie, machines servant à immobiliser les chevaux ou les boeufs pour qu'on les ferre ou les soigne).
+#    - Les noms qui au singulier se terminent par "z", "x", ou "s" ne changent pas au pluriel.

@@ -1,0 +1,92 @@
+<!ENTITY kgen.name "KGen">
+<!ENTITY kgen.tooltiptext "Voir les mots">
+<!ENTITY kgen.tabs.list "Liste">
+<!ENTITY kgen.tabs.stats "Stats">
+<!ENTITY kgen.tabs.cloud "Nuage">
+<!ENTITY kgen.tabs.export "Export">
+<!ENTITY kgen.tabs.options "Options">
+<!ENTITY kgen.tabs.tags "Balises">
+<!ENTITY kgen.tabs.atts "Attributs">
+<!ENTITY kgen.tabs.uri "Uri">
+<!ENTITY kgen.tabs.ignore "Ignorés">
+<!ENTITY kgen.keywords "Liste des mots">
+<!ENTITY kgen.keywords.name "Nom">
+<!ENTITY kgen.keywords.repeat "Répétition">
+<!ENTITY kgen.keywords.weight "Poids">
+<!ENTITY kgen.keywords.position "Pos.">
+<!ENTITY kgen.keywords.desc "Maintenez la touche CTRL enfoncée pour de multiples sélections.">
+<!ENTITY kgen.keywords.desc2 "Cliquez droit sur un mot pour plus d'infos.">
+<!ENTITY kgen.keywords.export "Exporter dans le presse-papiers">
+<!ENTITY kgen.keywords.exportall "Avec poids et répétitions">
+<!ENTITY kgen.scan "Scanner ce document">
+<!ENTITY kgen.stats.words "Mots">
+<!ENTITY kgen.stats.totalwords "Nombre total de mots :">
+<!ENTITY kgen.stats.originalwords "Nombre de mots différents :">
+<!ENTITY kgen.stats.vocable "Richesse du vocabulaire (en pourcent) :">
+<!ENTITY kgen.stats.keptwords "Nombre de mots conservés :">
+<!ENTITY kgen.stats.html "Document HTML">
+<!ENTITY kgen.stats.totalchars "Nombre total de caractères :">
+<!ENTITY kgen.stats.efficientchars "Nombre de caractères affichant du texte :">
+<!ENTITY kgen.stats.htmlquality "Richesse du HTML (en pourcent) :">
+<!ENTITY kgen.stats.dictionnary "Dictionnaire">
+<!ENTITY kgen.stats.totalknown "Nombre de mots reconnus :">
+<!ENTITY kgen.stats.totalunknown "Nombre de mots inconnus :">
+<!ENTITY kgen.stats.wordsquality "Richesse du texte (en pourcent) :">
+<!ENTITY kgen.cloud.factor "Facteur de taille">
+<!ENTITY kgen.cloud.redraw "Redessiner">
+<!ENTITY kgen.cloud.clipboard "Source HTML vers le presse-papiers">
+<!ENTITY kgen.export.cvs "Options d'exportation">
+<!ENTITY kgen.export.cvsseparator "Séparateur de champ">
+<!ENTITY kgen.export.cvsstring "Délimiteur de chaîne">
+<!ENTITY kgen.export.cvsselection "Exporter la sélection uniquement">
+<!ENTITY kgen.export.save "Exporter le fichier">
+<!ENTITY kgen.sort "Trier les mots">
+<!ENTITY kgen.sort.weight "Selon leur poids">
+<!ENTITY kgen.sort.repeat "Par répétition">
+<!ENTITY kgen.sort.length "Selon leur taille">
+<!ENTITY kgen.sort.name "Par ordre alphabétique">
+<!ENTITY kgen.sort.fposition "Par première apparition">
+<!ENTITY kgen.sort.aposition "Selon sa position moyenne">
+<!ENTITY kgen.ignore "Ignorer les mots">
+<!ENTITY kgen.ignore.minlength "Contenant moins de (x) lettres">
+<!ENTITY kgen.ignore.minweight "Ayant un poids de moins de">
+<!ENTITY kgen.ignore.minrepeat "Qui se répètent moins de (x) fois">
+<!ENTITY kgen.combinaison "Combinaisons de mots">
+<!ENTITY kgen.combinaison.maxword "Combiner maximum (x) mots">
+<!ENTITY kgen.other "Autre">
+<!ENTITY kgen.other.percent "Exprimer les valeurs en pourcent">
+<!ENTITY kgen.other.wordstot "Pourcentage de répétition sur le total réel">
+<!ENTITY kgen.other.ignore "Ne pas utiliser la liste de mots ignorés">
+<!ENTITY kgen.clipboard "Options du presse-papiers">
+<!ENTITY kgen.clipboard.separator "Séparateur de mots-clés">
+<!ENTITY kgen.wordseparator.caption "Options de ponctuation">
+<!ENTITY kgen.wordseparator "Caractères séparateurs de mots">
+<!ENTITY kgen.dictionnary "Dictionnaires">
+<!ENTITY kgen.dictionnary.none "Aucun (désactivé)">
+<!ENTITY kgen.tags "Poids des balises">
+<!ENTITY kgen.tags.tag "Balise">
+<!ENTITY kgen.atts "Poids des attributs">
+<!ENTITY kgen.atts.att "Attribut">
+<!ENTITY kgen.weight "Poids">
+<!ENTITY kgen.edit "Éditer">
+<!ENTITY kgen.add "Ajouter/Modifier">
+<!ENTITY kgen.uri "Poids dans l&apos;uri">
+<!ENTITY kgen.uri.hostname "Domaine">
+<!ENTITY kgen.uri.pathname "Chemin du fichier">
+<!ENTITY kgen.ilist "Liste noire">
+<!ENTITY kgen.ilist.iwords "Mots ignorés">
+<!ENTITY kgen.ilist.desc "Double clic pour supprimer">
+<!ENTITY kgen.contextmenu.synonym "Synonymes">
+<!ENTITY kgen.contextmenu.synonym.ttt "Chercher des synonymes de ce mot">
+<!ENTITY kgen.contextmenu.find "Trouver dans la page">
+<!ENTITY kgen.contextmenu.find.ttt "Trouver les occurences de ce mot dans la page en cours">
+<!ENTITY kgen.contextmenu.ignore "Ignorer ce mot">
+<!ENTITY kgen.contextmenu.ignore.ttt "Ignorer ce mot lors des prochains scans">
+<!ENTITY kgen.contextmenu.copy "Copier la sélection">
+<!ENTITY kgen.contextmenu.copy.ttt "Copier les mots sélectionnés">
+<!ENTITY kgen.contextmenu.copyall "Tout copier">
+<!ENTITY kgen.contextmenu.copyall.ttt "Copier toutes les informations sélectionnées">
+<!ENTITY kgen.contextmenu.definition "Définition">
+<!ENTITY kgen.contextmenu.definition.ttt "Voir la définition de ce mot dans le Wiktionnaire">
+<!ENTITY kgen.contextmenu.contribute "Contribuer">
+<!ENTITY kgen.contextmenu.contribute.ttt "Contribuer à KGen">

@@ -1,0 +1,10 @@
+{
+  "description": {
+    "message": "Display the strongest keywords of a webpage for search engines.",
+    "description": ""
+  },
+  "tooltip": {
+    "message": "Scan this page",
+    "description": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": {
+    "message": "Affiche les mots-clés les plus importants pour les moteurs de recherche.",
+    "description": ""
+  },
+  "tooltip": {
+    "message": "Scanner cette page",
+    "description": ""
+  }
+}
