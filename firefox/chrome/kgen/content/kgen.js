@@ -66,7 +66,7 @@ KGen.prototype.getElementWords = function (element, ratio)
 		&&element.nodeName=='p'&&element.nodeName=='br'&&element.nodeName=='pre'&&element.nodeName=='address'
 		&&element.nodeName=='ol'&&element.nodeName=='ul'&&element.nodeName=='dl'&&element.nodeName=='li'&&element.nodeName=='dt'&&element.nodeName=='dd')
 		this.curWordChain= new Array();
-	if(element.hasAttributes())
+	if(element.attributes && element.attributes.length)
 		{
 		for(var i=element.attributes.length-1; i>=0; i--)
 			{
