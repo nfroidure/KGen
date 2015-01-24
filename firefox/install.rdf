@@ -4,7 +4,7 @@
 
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="kgen@elitwork.com"
-                   em:version="0.8.2"
+                   em:version="0.8.3"
                    em:name="KGen"
                    em:creator="Nicolas FROIDURE"
                    em:homepageURL="http://kgen.elitwork.com/"
@@ -15,5 +15,5 @@
   <RDF:Description RDF:about="rdf:#$arpP13"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="4.0"
-                   em:maxVersion="30.*" />
+                   em:maxVersion="35.*" />
 </RDF:RDF>
