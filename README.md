@@ -1,6 +1,9 @@
 KGen
 ============
 
+** Abandonated: ** I'm not doing to maintain this project anymore, i'll just leave it here for
+ historical reasons. Feel free to réuse it according to its license.
+
 KGen is a free GNU/GPL extension for both Google Chrome and Firefox that allows you to :
 * see the strongest words on a web page
 * know whick are in the dictionnary
